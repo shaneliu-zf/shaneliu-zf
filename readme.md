@@ -2,6 +2,8 @@
 <h1 align="center">Hi , I'm 櫛風(Shane liu)</h1>
 <h3 align="center">A university student from Taiwan</h3>
 
+<iframe width="100%" src="http://shaneliu.studio-alvitr.com/resume/" frameborder="0" allowfullscreen></iframe>
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://www.facebook.com/profile.php?id=100004641964618" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="shane liu" height="30" width="40" /></a>
