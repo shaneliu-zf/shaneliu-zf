@@ -2,7 +2,7 @@
 <h1 align="center">Hi , I'm 櫛風(Shane liu)</h1>
 <h3 align="center">A university student from Taiwan</h3>
 
-My Resume: http://shaneliu.studio-alvitr.com/resume/
+My Resume: https://shaneliu.studio-alvitr.com/resume/
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
