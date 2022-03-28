@@ -3,7 +3,11 @@
 <h3 align="center">A university student from Taiwan</h3>
 
 My Resume: https://shaneliu.studio-alvitr.com/resume/
+
+<br />
 [![wakatime](https://wakatime.com/badge/user/87d21309-7a14-498a-9e82-1222281de88c.svg)](https://wakatime.com/@87d21309-7a14-498a-9e82-1222281de88c)
+
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://www.facebook.com/profile.php?id=100004641964618" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="shane liu" height="30" width="40" /></a>
