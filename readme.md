@@ -1,31 +1,16 @@
-
-<h1 align="center">Hi , I'm 櫛風(Shane liu)</h1>
-<h3 align="center">A university student from Taiwan</h3>
-
-
-
-<a href="https://wakatime.com/@87d21309-7a14-498a-9e82-1222281de88c"><img src="https://wakatime.com/badge/user/87d21309-7a14-498a-9e82-1222281de88c.svg" alt="Total time coded since Mar 28 2022" /></a>
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://www.facebook.com/profile.php?id=100004641964618" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="shane liu" height="30" width="40" /></a>
-<a href="https://instagram.com/shaneliu.zf" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="shaneliu.zf" height="30" width="40" /></a>
-<a href="https://codeforces.com/profile/shaneliu" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codeforces.svg" alt="shaneliu" height="30" width="40" /></a>
-</p>
-<h3 align="left">Languages and Tools</h3>
-<p align="left"> <a href="https://developer.android.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cs/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://unity.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" alt="unity" width="40" height="40"/> </a> </p>
-
-
+<h1 align="center">安安，這裡是櫛風(Shane liu)</h1>
+<h3 align="center">一個大二生</h3>
+<h3 align="center">目前就讀於國立臺北科技大學資工系（輔國立台北大學經濟系）</h3>
 
 
 
 ## 技能及興趣
 
-資訊：程式語言、演算法、CTF、Code golf、網站架設及維護、電腦科學
+資訊：程式語言、演算法、資訊安全、CTF、Code golf、網站架設及維護、電腦科學
 
 魔術：近距離魔術、純手法魔術、花切、千術、硬幣、撲克牌
 
-魔方：3x3x3（LBL、CFOP、metha、roux、ZZ、8355）、2x2x2（LBL、otega）、4x4x4（降階、yau）、5x5x5、6x6x6、7x7x7、SQ-1、Pyraminx、Megaminx、Skewb、楓葉（方圓）
+魔方：3x3x3（LBL、CFOP、metha、roux、ZZ、8355）、2x2x2（LBL、otega）、4x4x4（降階、yau）、5x5x5（84）、6x6x6、7x7x7、SQ-1、Pyraminx、Megaminx、Skewb、楓葉（方圓）
 
 文學：近體詩寫作、小說創作（奇幻、科幻、古風） 
 
@@ -35,7 +20,21 @@ TCG：魔法風雲會、PTCG、遊戲王、血肉之戰
 
 板類運動：飄移板、蛇板、雙龍板
 
-其他：溜溜球、競技疊杯、蝴蝶刀、跆拳道、華山派、直排輪（花式、競速）、扯鈴、法律、經濟
+其他：溜溜球、劍玉、競技疊杯、蝴蝶刀、跆拳道、華山派武術、直排輪（花式、競速）、扯鈴、法律、經濟
+
+
+
+## 資訊工程
+
+<a href="https://wakatime.com/@87d21309-7a14-498a-9e82-1222281de88c"><img src="https://wakatime.com/badge/user/87d21309-7a14-498a-9e82-1222281de88c.svg" alt="Total time coded since Mar 28 2022" /></a>
+
+程式語言：C++、Python3、Kotlin、Java、PHP、javascript、Julia、Matlab、C#、Swift、Brainfuck
+
+
+
+
+
+
 
 ## 參與競賽
 
@@ -77,14 +76,13 @@ TCG：魔法風雲會、PTCG、遊戲王、血肉之戰
 | 第一屆台灣硬幣魔術比賽                         | 魔術        | 2020 |                |
 | 少年圖靈計畫程式挑戰營初賽                     | 競技程式    | 2021 | 晉級決賽       |
 | 少年圖靈計畫程式挑戰營決賽                     | 競技程式    | 2021 |                |
-<<<<<<< HEAD
 | Ais3 pre-exam                                  | 資安（CTF） | 2021 |                |
 |小丸號第十屆屆魔術方塊大賽（九個項目）|魔術方塊|2022||
 | CodeWars Taiwan2022 全國大學程式設計競賽       | 競技程式    | 2022 | 第十二名       |
-=======
 | HP CodeWars 大學賽                                   | 競技程式    | 2022 |        第十二名        |
 | NCPC全國電腦軟體設計競賽初賽                                   | 競技程式    | 2022 |        第二十九名        |
->>>>>>> 1dee51426a1d7af77895be3d6bcb877de2511d0f
+| NCPC全國電腦軟體設計競賽決賽                                   | 競技程式    | 2022 |        第四十五名        |
+| TOPC                                   | 競技程式    | 2022 |        第五十二名        |
 
 
 
@@ -104,12 +102,12 @@ TCG：魔法風雲會、PTCG、遊戲王、血肉之戰
 | 新竹高中畢編會         | 班級代表     |
 | 新竹高中畢編會         | 主席         |
 | 速速製衣               | 北科區業務長 |
-| 夢想一號魔術方塊學院     | 講師         |
+| 夢想一號魔術方塊學院     | 合作講師       |
 | 魔方小天地             | 老師         |
 |2021臺北科技大學新生群|管理員|
 |2022臺北科技大學新生群|管理員|
 | 台北科技大學圍棋社             | 公關         |
- 
+| 台北科技大學駭客喵喵社             | 副社長       |
 
 ## 舉辦活動
 
@@ -169,6 +167,7 @@ TCG：魔法風雲會、PTCG、遊戲王、血肉之戰
 | 新竹高中水上運動會                 | 2019 | 新竹高中 | 總務處獎狀組負責人 |
 | 新竹高中陸上運動會                 | 2019 | 新竹高中 | 總務處獎狀組負責人 |
 | 小丸號第十二屆公開賽               | 2020 | 台南     | 工作人員、裁判     |
+|SITCON HOC|2020|交通大學|工作人員|
 | 第五屆前鎮高中競技程式同好會線上賽 | 2021 | CJOJ     | 出題者之一         |
 
 
@@ -179,10 +178,10 @@ TCG：魔法風雲會、PTCG、遊戲王、血肉之戰
 2. 精誠CSC程式種子營「Python程式進階」課程        
 3. 清大「競技程式設計」課程旁聽
 4. 資訊之芽語法班（第一階段滿分第一名結業，兩階段第二名優良結業）    
-<<<<<<< HEAD
 5. 教育部資訊安全人才培育計畫-第六屆台灣好厲駭導師高階培訓模式
 6. 教育部資訊安全人才培育計畫-第六屆台灣好厲駭導師深度輔導模式
-7. Global Cybersecurity Camp
+7. Global Cybersecurity Camp 2022
+7. 教育部資訊安全人才培育計畫-第七屆台灣好厲駭導師高階培訓模式
 
 
 
@@ -205,16 +204,7 @@ TCG：魔法風雲會、PTCG、遊戲王、血肉之戰
 | 新竹高中軟體研究社 | 高一，約三十人                                  | C++、Python、Renpy |
 | 新竹高中資訊校隊培訓 | 高中混齡，約十人                                  | C++ |
 
-=======
 
-5. 教育部資訊安全人才培育計畫-第六屆台灣好厲駭導師高階培訓模式結業
-
-6. 教育部資訊安全人才培育計畫-第六屆台灣好厲駭導師深度輔導模式結業
-7. Global Cybersecurity Camp 2022
-
-7. 教育部資訊安全人才培育計畫-第七屆台灣好厲駭導師高階培訓模式（在讀）
-   
->>>>>>> 1dee51426a1d7af77895be3d6bcb877de2511d0f
 
 
 ## 證照
