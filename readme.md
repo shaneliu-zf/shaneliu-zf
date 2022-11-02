@@ -121,7 +121,7 @@ TCG：魔法風雲會、PTCG、遊戲王、血肉之戰
 | 新竹高中軟研社聯合寒訓 | 副召 | 竹中竹女與中部電資類社團共十四社         | 交通大學    |            |
 | 新竹高中魔術社聯合寒訓 | 副召 | 竹中、建中、景美、成淵、松山共五校魔術社 | 長城溪森林  |            |
 | 新竹高中軟研社聯合寒訓 | 副召 | 竹中與南部電資類社團共六社               | 成功大學    | 因疫情停辦 |
-| 新竹高中資訊競賽校隊   | 隊長兼助教     ||新竹高中||
+| 新竹高中資訊競賽校隊暑期培訓 | 隊長兼助教     ||新竹高中||
 | COSCUP開源人年會       | 導播 | COSCUP眾工作人員                         | gather town |            |
 | 北科新生群新生活動     | 總召 | 2021北科新生群管理員群 | gather town |            |
 | 北科資工系聯誼     | 副召 |                                          | 臺北科技大學 ||
@@ -147,7 +147,7 @@ TCG：魔法風雲會、PTCG、遊戲王、血肉之戰
 | COSCUP開源人年會           | 2022 | 臺灣科技大學 |
 | HITCON台灣駭客年會           | 2022 | 線上參與 |
 | 第三屆台灣線上魔術大會OMG  | 2022 | youtube              |
-| 2022 IThome 鐵人賽|2022|
+| 2022 IThome 鐵人賽|2022|[連結](https://ithelp.ithome.com.tw/users/20133574/ironman/5353)|
 
 
 ## 表演
@@ -256,12 +256,16 @@ TCG：魔法風雲會、PTCG、遊戲王、血肉之戰
 | 輕小說部         | FB大型社團「輕小說部」專用的小說網站                       | (關閉)                                                       |
 | Atsung's Magic   | 與朋友一起經營的魔術教學網站                               | (關閉)                                                       |
 | Green Judge      | 中女程式解題系統，全網排名第50名                           | [點我](http://www.tcgs.tc.edu.tw:1218/ShowUserStatistic?account=shaneliu1010) |
-| CSDC OJ          | 竹中軟研社團OJ，曾經是網站管理員及出題者                   | [點我](http://csdc.tw)                                       |
+| CSDC OJ          | 竹中軟研社團OJ，曾任網站管理員及出題者                  | [點我](http://csdc.tw)                                       |
 | 櫛風             | 個人Youtube頻道                                            | [點我](https://www.youtube.com/channel/UCSxcwFhmCijE0PM8MhZvh2g) |
 | 櫛雨沐晴         | 個人網站，內容為CTF、演算法之解題筆記，跟自己設計的CTF題目 | (關閉)                                                       |
 | GitHub           | 開源分享自己做的程式專案                                   | [點我](https://github.com/shane-liu-1010)                    |
 | Code Golf        | Code golf競賽，全網排名第533名                             | [點我](https://code.golf/golfers/shane-liu-1010)             |
-| 櫛·Sleight       | 個人IG帳號，專門上傳魔術表演影片                           | [點我](https://www.instagram.com/shane_liu_sleight/)         |
+| 魔術師 櫛風 | 魔術表演用商業資訊IG                          | [點我](https://www.instagram.com/shaneliu_magic/)         |
 | 櫛·Music         | 個人IG帳號，專門上傳鋼琴表演影片                           | [點我](https://www.instagram.com/shane_liu_music/)           |
+| 櫛·yoyo         | 個人IG帳號，分享溜溜球表演影片                          | [點我](https://www.instagram.com/shane_liu_yoyo/)           |
+|魔術方塊教學 - 櫛風老師|魔術方塊用商業資訊IG|[點我](https://www.instagram.com/cuber_2019liuc04/)|
 | 數位司馬懿       | 與朋友一起經營的IG帳號，分享文史哲的故事                   | [點我](https://www.instagram.com/literature_history/)        |
 | WCA              | 世界魔方協會登錄的選手資料                                 | [點我](https://www.worldcubeassociation.org/persons/2019LIUC04) |
+|馬會貨幣系統|線上TRPG的銀行系統，包含於messenger bot上的ATM及網頁的櫃員系統。巔峰時期有上千用戶|(關閉)|
+|IThome 鐵人賽2022| 鐵人賽，連續三十天寫的Kotlin教學                           |[點我](https://ithelp.ithome.com.tw/users/20133574/ironman/5353)|
