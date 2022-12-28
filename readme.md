@@ -1,5 +1,5 @@
 <h1 align="center">櫛風(Shane liu)</h1>
-<h3 align="center">目前大二生</h3>
+<h3 align="center">目前大二</h3>
 <h3 align="center">就讀於國立臺北科技大學資工系（輔國立台北大學經濟系）</h3>
 
 
