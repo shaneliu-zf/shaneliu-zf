@@ -1,6 +1,6 @@
-<h1 align="center">安安，這裡是櫛風(Shane liu)</h1>
-<h3 align="center">一個大二生</h3>
-<h3 align="center">目前就讀於國立臺北科技大學資工系（輔國立台北大學經濟系）</h3>
+<h1 align="center">櫛風(Shane liu)</h1>
+<h3 align="center">目前大二生</h3>
+<h3 align="center">就讀於國立臺北科技大學資工系（輔國立台北大學經濟系）</h3>
 
 
 
@@ -222,7 +222,7 @@ TCG：魔法風雲會、PTCG
 | ----------------- | ----------------------------------------------- | ------------------ |
 |電腦軟體應用|丙級技術士|勞動部勞動力發展署技能檢定中心|
 |APCS|觀念四/實作三|教育部智慧創新跨域人才培育計畫|
-|AIL人工智慧素養國際認證|(GLAD) Global Learning & Assessment Development|
+|AIL人工智慧素養國際認證||(GLAD) Global Learning & Assessment Development|
 |CPE|4題/7題|大學程式能力檢定委員會|
 |魔術方塊綜合能力認證|A+（790分）|夢想一號魔術方塊學院|
 
