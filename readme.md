@@ -263,10 +263,11 @@ TCG：魔法風雲會、PTCG
 | 櫛風與他的夥伴們 | 台灣最大小說網站「popo城邦原創」，在上面上傳自己寫的小說   | [點我](https://www.popo.tw/users/shanepsa)                   |
 | 輕小說部         | FB大型社團「輕小說部」專用的小說網站                       | (關閉)                                                       |
 | Atsung's Magic   | 與朋友一起經營的魔術教學網站                               | (關閉)                                                       |
-| Green Judge      | 中女程式解題系統，全網排名第50名                           | [點我](http://www.tcgs.tc.edu.tw:1218/ShowUserStatistic?account=shaneliu1010) |
+| Green Judge      | 中女程式解題系統，全網排名第50名                           | (關閉)|
 | CSDC OJ          | 竹中軟研社團OJ，曾任網站管理員及出題者                  | [點我](http://csdc.tw)                                       |
 | 櫛風             | 個人Youtube頻道                                            | [點我](https://www.youtube.com/channel/UCSxcwFhmCijE0PM8MhZvh2g) |
-| 櫛雨沐晴         | 個人網站，內容為CTF、演算法之解題筆記，跟自己設計的CTF題目 | (關閉)                                                       |
+| 櫛雨沐晴         | 個人網站，內容為CTF、演算法之解題筆記，跟自己設計的CTF題目 | (關閉)                                                       ||
+|Bugku CTF|中國最大CTF網站，最高曾經排名42|[點我](https://ctf.bugku.com/user/info/id/6384.html)|
 | GitHub           | 開源分享自己做的程式專案                                   | [點我](https://github.com/shane-liu-1010)                    |
 | Code Golf        | Code golf競賽，全網排名第533名                             | [點我](https://code.golf/golfers/shane-liu-1010)             |
 | 魔術師 櫛風 | 魔術表演用商業資訊IG                          | [點我](https://www.instagram.com/shaneliu_magic/)         |
