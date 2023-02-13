@@ -26,7 +26,7 @@ TCG：魔法風雲會、PTCG
 
 ## 資訊工程
 
-<a href="https://wakatime.com/@87d21309-7a14-498a-9e82-1222281de88c"><img src="https://wakatime.com/badge/user/87d21309-7a14-498a-9e82-1222281de88c.svg" alt="Total time coded since Mar 28 2022" /></a>
+<a href="https://wakatime.com/@87d21309-7a14-498a-9e82-1222281de88c"><img src="https://wakatime.com/badge/user/87d21309-7a14-498a-9e82-1222281de88c.svg" alt="Total time coded since Mar 28 2022" /></a>（從2022/3/28開始計算)
 
 程式語言：C++、Kotlin、Python3、Java、PHP、javascript、Julia、Matlab、C#、Swift、Brainfuck
 
