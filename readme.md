@@ -1,55 +1,81 @@
 <h1 align="center">櫛風(Shane liu)</h1>
-<h3 align="center">目前大二</h3>
 <h3 align="center">就讀於國立臺北科技大學資工系（輔 國立台北大學經濟系）</h3>
 
 
 
+[toc]
+
 ## 技能及興趣
 
-資訊：程式語言、演算法、資訊安全、CTF、Code golf、網站架設及維護、電腦科學
+從小我爸就非常鼓勵我對於各種技能多方嘗試，也造就現在的我。
 
-魔術：近距離魔術、純手法魔術、花切、千術、硬幣、撲克牌、催眠、心靈
+資訊工程：程式語言、演算法、資訊安全、CTF、Code golf、網站架設及維護、電腦科學
 
-魔方
+魔術：近距離魔術、硬幣、撲克牌、催眠、讀心、千術、花式切牌
 
-文學：近體詩寫作、小說創作（奇幻、科幻、古風） 
+魔術方塊
+
+硬幣收藏及做舊
 
 音樂：鋼琴（流行樂即興作曲）、吉他（民謠、電吉、古典）、烏克麗麗
+
+文學寫作：近體詩寫作、小說創作（奇幻、科幻、古風） 
 
 TCG：魔法風雲會、PTCG
 
 板類運動：飄移板、蛇板、雙龍板
 
-其他：硬幣收藏及做舊、溜溜球、劍玉、競技疊杯、德州撲克、蝴蝶刀、跆拳道、華山派武術、直排輪（花式、競速）、扯鈴、法律
+雜耍：溜溜球、劍玉、、蝴蝶刀
 
-
+其他：德州撲克、法律、競技疊杯、跆拳道、華山派武術、直排輪（花式、競速）
 
 
 
 ## 資訊工程
 
-<a href="https://wakatime.com/@87d21309-7a14-498a-9e82-1222281de88c"><img src="https://wakatime.com/badge/user/87d21309-7a14-498a-9e82-1222281de88c.svg" alt="Total time coded since Mar 28 2022" /></a>（從2022/3/28開始計算)
+<a href="https://wakatime.com/@87d21309-7a14-498a-9e82-1222281de88c"><img src="https://wakatime.com/badge/user/87d21309-7a14-498a-9e82-1222281de88c.svg" alt="Total time coded since Mar 28 2022" /></a>（2022/3/28開始計算)
 
-程式語言：C++、Kotlin、Python3、Java、PHP、javascript、Julia、Matlab、C#、Swift、Brainfuck
+擅長程式語言：C++、Kotlin、Python3、Java、PHP、javascript、Julia、C#、Swift、Brainfuck、Matlab
+
+### 學習歷程
+
+- 小四 開始接觸 App Inventor2開發了幾款小遊戲
+- 小五 買了一本C++的書開始學習，對程式設計有了基礎的理解。
+- 小六 嘗試網頁開發，初步接觸了HTML、CSS、Javascipt。
+- 國一 接觸wordpress，開始學習PHP及網站架設，了解關於域名、虛擬主機。
+- 國二 接觸Java，開始開發android app並陸續上架了幾個程式於play商店，現在已經有上萬下載量。
+- 高一 參加竹中軟體研究社，重新拾回C++，並開始學習資料結構及演算法。
+- 高二 因緣際會開始接觸資安，在中國最大CTF網站BugkuCTF排名42名。
+- 高三
+  - 入選台灣好厲駭導師深度輔導模式。
+  - 學了多個程式語言，嘗試自己設計程式語言及直譯器，發覺自己對電腦科學的興趣，開始閱讀編譯原理。
+
+- 大一 參加GCC，小組以C++開發出一款可以躲過防毒軟體的木馬程式。
+- 大二 X、創立臺北科技大學駭客喵喵社。
+- to be continued.
 
 
 
 ## 魔術方塊
 
-3x3x3（CFOP、LBL、metha、roux、ZZ、8355）、2x2x2（LBL、otega）、4x4x4（降階、yau、k4）、5x5x5、6x6x6、7x7x7、SQ-1、Pyraminx、Megaminx、Skewb、楓葉（方圓）、魔錶、恐龍、223、332、二階鏡面、風火輪、三階齒輪、三階鏡面、二階五魔方、費雪、四階金字塔、二階金字塔、O你·、六階、七階、軸方塊、三葉草
+- 擅長各類魔術方塊比賽項目：3x3x3（CFOP、LBL、metha、roux、ZZ、8355）、2x2x2（LBL、otega）、4x4x4（redux、yau、k4）、5x5x5、6x6x6、7x7x7、SQ-1、Pyraminx、Megaminx、Skewb、最少步數解
+- 各類異形魔術方塊還原：楓葉（方圓）、魔錶、恐龍、223、332、334、331、二階鏡面、風火輪、三階齒輪、三階鏡面、二階五魔方、費雪、四階金字塔、二階金字塔、六階、七階、軸方塊、三葉草、四階粽子、三階粽子、二階金字塔
+- 夢想一號魔術方塊學院專業合作講師
+- 三階魔術方塊mehta解法使用者，全世界使用人數不到1%的困難解法
+- 夢想一號魔術方塊綜合能力認證：A+（790分），目前排名第五
+- 曾擔任多場比賽專業裁判及打亂員
+- 與多間補習班、才藝教室配合，多年教授魔術方塊經驗
 
-魔術方塊綜合能力認證：790分，A+
 
 
 
-
-## 參與競賽
+## 競賽
 
 | 比賽名稱                                       | 類型/項目   | 年份 | 成績           |
 | ---------------------------------------------- | ----------- | ---- | -------------- |
-| 高級中學數理及資訊學科能力競賽資訊科北二區複賽 | 競技程式    | 2020 | 佳作第十八名   |
+| 高級中學數理及資訊學科能力競賽資訊科北二區複賽 | 競技程式    | 2020 | 第十八名（佳作） |
 | 高級中學數理及資訊學科能力競賽資訊科校內初賽   | 競技程式    | 2019 | 第一名         |
-| 資訊奧林匹亞選手海選                           | 競技程式    | 2019 | 第一名（滿分） |
+| 資訊奧林匹亞選手海選                           | 競技程式    | 2019 | 滿分 |
 | TOI推廣計畫新手同好會團體賽                    | 競技程式    | 2019 | 第二名         |
 | 高級中學數理及資訊學科能力競賽資訊科校內初賽   | 競技程式    | 2018 | 第十一名       |
 | HP CodeWars                                    | 競技程式    | 2019 | 第二十一名     |
@@ -93,6 +119,8 @@ TCG：魔法風雲會、PTCG
 | TOPC                                   | 競技程式    | 2022 |        第五十二名        |
 | ICPC Taoyuan site                                  | 競技程式    | 2022 |        第六十九名        |
 |2022 魔術方塊台灣錦標賽|魔術方塊|2022||
+|2022 第二屆夢想一號魔術方塊學員賽 |魔術方塊|2022||
+|2023 夢想一號魔術方塊講師線上賽 |魔術方塊|2023|季軍|
 
 
 
@@ -100,8 +128,8 @@ TCG：魔法風雲會、PTCG
 
 | 組織                   | 職位         |
 | ---------------------- | ------------ |
-| 速速製衣               | 北科區業務 |
-| 夢想一號魔術方塊學院     | B級合作講師       |
+| 速速製衣               | 業務 |
+| 夢想一號魔術方塊學院     | 專業合作講師     |
 | 夢想一號魔術方塊學院科教館店     | 店員       |
 | 魔方小天地             | 老師         |
 |2022臺北科技大學新生群|管理員|
@@ -109,6 +137,7 @@ TCG：魔法風雲會、PTCG
 |Taiwan Kotlin User Group| 社群成員|
 | 台北科技大學圍棋社             | 公關         |
 | 台北科技大學駭客喵喵社             | 副社長       |
+| 台北科技大學競技撲克研究社             | 社員         |
 
 
 
@@ -209,7 +238,7 @@ TCG：魔法風雲會、PTCG
 |電腦軟體應用|丙級技術士|勞動部勞動力發展署技能檢定中心|
 |APCS|觀念四(84/100)/實作四(340/400)|教育部智慧創新跨域人才培育計畫|
 |AIL人工智慧素養國際認證|通過|(GLAD) Global Learning & Assessment Development|
-|CPE|4題/7題|大學程式能力檢定委員會|
+|CPE|5題/7題，71名|大學程式能力檢定委員會|
 |魔術方塊綜合能力認證|A+（790分）|夢想一號魔術方塊學院|
 
 
@@ -241,7 +270,10 @@ TCG：魔法風雲會、PTCG
 | Vocabary Hero        | 團隊開發的2D橫軸射擊遊戲，負責程式、劇本、音效        | C#       |                                                              |
 | Perceptron           | 用C++手刻感知機模型                                   | C++      | [點我](https://github.com/shane-liu-1010/Perceptron)         |
 | CodeBook             | 自動將程式碼生成md，方便競賽時需要準備codebook        | C++      | [點我](https://github.com/shaneliu-zf/CodeBook)              |
-|Coin  |小組專案製作購物網站| React JS ||
+|(無名)|參與Global Cybersecurity Camp 2022時，小組開發的木馬軟體，可躲過防毒軟體|C++||
+|collatz_by_GA|使用基因演算法找出考拉茲猜想的遞迴次數|C++|[點我](https://github.com/shaneliu-zf/collatz_by_GA)|
+|Coin  |小組專案製作購物網站| React JS |[點我](https://github.com/shaneliu-zf/coin-master-shop)|
+|Sheep N Sheep |物件導向程式設計實習作品| C++ |[點我](https://github.com/CoreXing/Sheep-and-sheep)|
 
 
 
@@ -251,16 +283,16 @@ TCG：魔法風雲會、PTCG
 | ---------------- | ---------------------------------------------------------- | ------------------------------------------------------------ |
 | 圈圈叉叉的科技   | 分享WordPress使用上的一些技巧                              | (關閉)                                                       |
 | 櫛風♠️L           | 個人line@帳號，發表小說及動態更新                          | [點我](http://line.me/ti/p/%40cdb9137r)                      |
-| 櫛風與他的夥伴們 | 台灣最大小說網站「popo城邦原創」，在上面上傳自己寫的小說   | [點我](https://www.popo.tw/users/shanepsa)                   |
+| 櫛風與他的夥伴們 | 小說網站「popo城邦原創」，在上面上傳自己寫的小說   | [點我](https://www.popo.tw/users/shanepsa)                   |
 | 輕小說部         | FB大型社團「輕小說部」專用的小說網站                       | (關閉)                                                       |
 | Atsung's Magic   | 與朋友一起經營的魔術教學網站                               | (關閉)                                                       |
-| Green Judge      | 中女程式解題系統，全網排名第50名                           | (關閉)|
+| Green Judge      | 中女程式解題系統，排名第50名                           | (關閉)|
 | CSDC OJ          | 竹中軟研社團OJ，曾任網站管理員及出題者                  | [點我](http://csdc.tw)                                       |
 | 櫛風             | 個人Youtube頻道                                            | [點我](https://www.youtube.com/channel/UCSxcwFhmCijE0PM8MhZvh2g) |
-| 櫛雨沐晴         | 個人網站，內容為CTF、演算法之解題筆記，跟自己設計的CTF題目 | (關閉)                                                       ||
-|Bugku CTF|中國最大CTF網站，最高曾經排名42|[點我](https://ctf.bugku.com/user/info/id/6384.html)|
+| 櫛雨沐晴         | 個人網站，內容為CTF、演算法之解題筆記，跟自己設計的CTF題目 | (關閉)                                                       |
+|Bugku CTF|中國最大CTF網站，最高排名第42名|[點我](https://ctf.bugku.com/user/info/id/6384.html)|
 | GitHub           | 開源分享自己做的程式專案                                   | [點我](https://github.com/shane-liu-1010)                    |
-| Code Golf        | Code golf競賽，全網排名第533名                             | [點我](https://code.golf/golfers/shane-liu-1010)             |
+| Code Golf        | Code golf競賽，最高排名第533名                           | [點我](https://code.golf/golfers/shane-liu-1010)             |
 | 魔術師 櫛風 | 魔術表演用商業資訊IG                          | [點我](https://www.instagram.com/shaneliu_magic/)         |
 | 櫛·Music         | 個人IG帳號，專門上傳鋼琴表演影片                           | [點我](https://www.instagram.com/shane_liu_music/)           |
 | 櫛·yoyo         | 個人IG帳號，分享溜溜球表演影片                          | [點我](https://www.instagram.com/shane_liu_yoyo/)           |
