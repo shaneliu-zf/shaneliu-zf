@@ -1,5 +1,5 @@
-<h1 align="center">櫛風(Shane liu)</h1>
-<h3 align="center">就讀於國立臺北科技大學資工系（輔 國立台北大學經濟系）</h3>
+<h1 align="center">劉承軒 aka 櫛風（Shane Liu）</h1>
+<h3 align="center">目前就讀於國立臺北科技大學資工系（輔 國立台北大學經濟系），大學二年級</h3>
 
 
 
