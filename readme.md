@@ -51,14 +51,16 @@
 |魔術方塊綜合能力認證|A+（790分）|夢想一號魔術方塊學院|
 |機器學習工程師||經濟部|
 |資訊安全工程師||經濟部|
-
+|台北市街頭藝人||台北市政府文化局|
 
 
 ## 技能及興趣
 
 資訊工程：程式語言、演算法、資訊安全、CTF、Code golf、手機應用軟體開發（Android、iOS）、網站前後端開發及架設維護、電腦科學
 
-表演藝術：魔術（硬幣、撲克牌、心靈、千術、派對、廳堂）、催眠、腹語、溜溜球、劍玉、蝴蝶刀、花式切牌、水晶球、雜耍球
+表演藝術：魔術（硬幣、撲克牌、心靈、千術、派對、廳堂）、催眠、腹語、花式切牌
+
+雜技：溜溜球、劍玉、蝴蝶刀、水晶球、雜耍球、雜耍棒
 
 手部極限運動：魔術方塊、競技疊杯
 
@@ -169,7 +171,6 @@ TCG：魔法風雲會、PTCG
 | 中原GDSC社課 | Clean Code： 如何寫好一個程式 | 2023 |中原大學||
 |《百戲｜初衷》交流會 |沿桌魔術教學|2023|||
 |築夢島 新竹交流會|近距離魔術教學|2023|築夢島魔術交流空間||
-|Google Devfast|TKUG介紹|2023|||
 
 
 
@@ -355,7 +356,7 @@ TCG：魔法風雲會、PTCG
 | Green Judge      | 中女程式解題系統，排名第50名                           | 關閉 |
 | CSDC OJ          | 竹中軟研社團 Online Judge，曾任網站管理員及出題者       | [點我](http://csdc.tw)                                       |
 | 櫛風             | 個人 Youtube 頻道                                          | [點我](https://www.youtube.com/channel/UCSxcwFhmCijE0PM8MhZvh2g) |
-| 櫛雨沐晴         | 個人網站，內容為 CTF 、演算法之解題筆記，跟自己設計的CTF題目 | 關閉                                                       |
+| 櫛雨沐晴         | 個人網站 |  [點我](http://shaneliu.studio-alvitr.com)                                                      |
 |Bugku CTF|中國最大 CTF 網站，最高排名第42名|[點我](https://ctf.bugku.com/user/info/id/6384.html)|
 | GitHub           | 開源分享自己做的程式專案                                   | [點我](https://github.com/shane-liu-1010)                    |
 | Code Golf        | Code Golf 競賽，最高排名第533名                         | [點我](https://code.golf/golfers/shane-liu-1010)             |
