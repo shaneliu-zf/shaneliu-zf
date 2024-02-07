@@ -363,7 +363,7 @@ TCG：魔法風雲會、PTCG
 | Code Golf        | Code Golf 競賽，最高排名第533名                         | [點我](https://code.golf/golfers/shane-liu-1010)             |
 | 魔術師 櫛風 | 魔術表演用商業資訊 IG                         | [點我](https://www.instagram.com/shaneliu_magic/)         |
 | 櫛·Music         | 個人 IG 帳號，專門上傳鋼琴表演影片                         | [點我](https://www.instagram.com/shane_liu_music/)           |
-| 櫛·yoyo         | 個人 IG 帳號，分享溜溜球表演影片                        | [點我](https://www.instagram.com/shane_liu_yoyo/)           |
+| 櫛風的雜技帳         | 個人 IG 帳號，分享雜技的練習及表演影片                        | [點我](https://www.instagram.com/shaneliu_circus)           |
 |魔術方塊教學 - 櫛風老師|魔術方塊用商業資訊 IG|[點我](https://www.instagram.com/cuber_2019liuc04/)|
 | 數位司馬懿       | 與朋友一起經營的 IG 帳號，分享文史哲的故事                 | [點我](https://www.instagram.com/literature_history/)        |
 | WCA              | 世界魔方協會登錄的選手資料                                 | [點我](https://www.worldcubeassociation.org/persons/2019LIUC04) |
