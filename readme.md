@@ -341,7 +341,7 @@ TCG：魔法風雲會、PTCG
 |collatz_by_GA|使用基因演算法找出考拉茲猜想的遞迴次數|C++|[點我](https://github.com/shaneliu-zf/collatz_by_GA)|
 |Coin  |小組專案製作購物網站| React JS |[點我](https://github.com/shaneliu-zf/coin-master-shop)|
 |Sheep N Sheep |物件導向程式設計實習作品| C++ |[點我](https://github.com/CoreXing/Sheep-and-sheep)|
-|EMOMO|資料庫系統小組專案|[點我](https://github.com/shaneliu-zf/EMOMO)|
+|EMOMO|資料庫系統小組專案|PHP|[點我](https://github.com/shaneliu-zf/EMOMO)|
 
 
 
