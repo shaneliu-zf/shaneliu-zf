@@ -207,11 +207,13 @@ TCG：魔法風雲會、PTCG、UA
 | -------------------- | -------------------------- | ---- | ---------------- | ---- |
 | Taiwan Kotlin User Group 線上 Kotlin 讀書會| Kotlin函式語法 | 2023 |線上||
 | KotlinConf' 23 Global Watch Party 台灣場 | Kotlin2.0 介紹 | 2023 |獺空間||
-| 北科追夢康輔社 玩轉魔方課程|魔術方塊教學|2023|台北科大|
+| 北科追夢康輔社 玩轉魔方課程|魔術方塊教學|2023|台北科大||
 | Android Taipei | Clean Code： 如何寫好一個程式 | 2023 |拼貼趣||
 | 中原GDSC社課 | Clean Code： 如何寫好一個程式 | 2023 |中原大學||
 | TKUG Kotlin MeetUp |這不是你平常寫的Kotlin:Code Golf 的黑魔法|2025 |Dcard||
-| COSCUP JVM閃電講|這不是你平常寫的Kotlin:Code Golf 的黑魔法|2025 |台科大||
+| COSCUP JVM台灣代表隊 JVM閃電講 |這不是你平常寫的Kotlin:Code Golf 的黑魔法|2025 |台科大||
+|AIS3 Junior|CTF入門導論|2026|清華大學||
+| COSCUP JVM台灣代表隊 |打造你自己的 Kotlin DSL：以文字冒險遊戲為例|2026 |台科大||
 
 
 
