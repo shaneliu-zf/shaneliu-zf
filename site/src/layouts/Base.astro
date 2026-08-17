@@ -1,0 +1,73 @@
+---
+import { SITE, NAV } from "../data/site";
+import PageToc from "../components/PageToc.astro";
+import "../styles/base.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  bodyClass?: string;
+}
+
+const { title, description = SITE.description, bodyClass } = Astro.props;
+const pageTitle = title ? `${title}｜${SITE.shortName}` : `${SITE.name}｜${SITE.tagline}`;
+const currentPath = Astro.url.pathname;
+const isCurrent = (href: string) => {
+  if (href.startsWith("http")) return false;
+  return href === "/" ? currentPath === "/" : currentPath.startsWith(href);
+};
+---
+
+<!doctype html>
+<html lang={SITE.language}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={Astro.url} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={SITE.name} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url} />
+    <meta name="twitter:card" content="summary" />
+  </head>
+  <body class={bodyClass}>
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <nav class="site-nav" aria-label="主要導覽">
+          <a class="wordmark" href="/">
+            {SITE.wordmark.head}<strong>{SITE.wordmark.tail}</strong>
+          </a>
+          <div class="site-nav__links">
+            {
+              NAV.map((item) => (
+                <a
+                  href={item.href}
+                  aria-current={isCurrent(item.href) ? "page" : undefined}
+                  rel={"external" in item && item.external ? "noopener noreferrer" : undefined}
+                >
+                  {item.label}
+                </a>
+              ))
+            }
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <PageToc />
+    <slot />
+
+    <div class="shell">
+      <footer class="site-footer">
+        <p class="site-footer__title">
+          {SITE.wordmark.head}<strong>{SITE.wordmark.tail}</strong>
+        </p>
+        <p class="site-footer__copy">© {new Date().getFullYear()} {SITE.name}</p>
+      </footer>
+    </div>
+  </body>
+</html>

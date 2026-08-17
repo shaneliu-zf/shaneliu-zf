@@ -1,0 +1,9 @@
+---
+import DomainArchive from "../../components/DomainArchive.astro";
+import { getDomainPage } from "../../data/domain-pages";
+
+const page = getDomainPage("performance");
+if (!page) throw new Error("找不到表演藝術頁設定");
+---
+
+<DomainArchive page={page} />

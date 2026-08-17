@@ -1,0 +1,9 @@
+---
+import DomainArchive from "../../components/DomainArchive.astro";
+import { getDomainPage } from "../../data/domain-pages";
+
+const page = getDomainPage("dexterity");
+if (!page) throw new Error("找不到手部極限運動頁設定");
+---
+
+<DomainArchive page={page} />

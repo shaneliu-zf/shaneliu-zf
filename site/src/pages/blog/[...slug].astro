@@ -1,0 +1,11 @@
+---
+import { getCollection } from "astro:content";
+import { SITE } from "../../data/site";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({ params: { slug: post.id } }));
+}
+
+return Astro.redirect(SITE.blogUrl, 302);
+---

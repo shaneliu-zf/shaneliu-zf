@@ -1,0 +1,28 @@
+---
+import Base from "../layouts/Base.astro";
+import "../styles/blog.css";
+---
+
+<Base title="找不到頁面" description="這個網址不存在。">
+  <main class="shell">
+    <div class="notfound">
+      <h1>404</h1>
+      <p>這裡什麼都沒有，連兔子都沒變出來。</p>
+      <a class="button button--primary" href="/">回到首頁</a>
+    </div>
+  </main>
+</Base>
+
+<style>
+  .button {
+    display: inline-block;
+    border: 1px solid var(--blue);
+    border-radius: 999px;
+    padding: 11px 20px;
+    color: #fff;
+    background: var(--blue);
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+</style>

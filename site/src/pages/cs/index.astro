@@ -1,0 +1,312 @@
+---
+import Base from "../../layouts/Base.astro";
+import ExpandListScript from "../../components/ExpandListScript.astro";
+import { CS_PROFILE } from "../../data/profile";
+import {
+  EXPERIENCE_DB,
+  EXPERIENCES,
+  formatExperienceDate,
+  describeExperience,
+  summarizeExperience,
+  hasType,
+  primaryType,
+  type Experience,
+} from "../../lib/experiences";
+import "../../styles/cs.css";
+
+const csRecords = EXPERIENCES.filter((item) =>
+  item.domains.some((domain) => domain === "cs" || domain === "security"),
+);
+const statusPriority = { current: 2, upcoming: 1, completed: 0, cancelled: -1 };
+const byImportance = (a: Experience, b: Experience) =>
+  Number(b.featured) - Number(a.featured) ||
+  statusPriority[b.status] - statusPriority[a.status] ||
+  (b.startDate ?? "").localeCompare(a.startDate ?? "");
+
+const ACHIEVEMENT_TYPES = new Set(["competition", "talk", "certification", "publication"]);
+
+const currentRecords = csRecords
+  .filter((item) => item.status === "current")
+  .sort(byImportance);
+const achievementRecords = csRecords.filter(
+  (item) =>
+    item.featured &&
+    item.status === "completed" &&
+    item.types.some((type) => ACHIEVEMENT_TYPES.has(type)),
+).sort(byImportance);
+const projectRecords = csRecords
+  .filter((item) => hasType(item, "project"))
+  .sort(byImportance);
+const experienceRecords = csRecords.filter((item) => !hasType(item, "project"));
+
+const experienceGroups = (() => {
+  const groups: Record<string, Experience[]> = {};
+  for (const item of experienceRecords) {
+    for (const type of item.types) {
+      (groups[type] ??= []).push(item);
+    }
+  }
+  Object.values(groups).forEach((records) => records.sort(byImportance));
+  const order = [
+    "education",
+    "work",
+    "research",
+    "talk",
+    "competition",
+    "publication",
+    "certification",
+    "course",
+    "community",
+    "event",
+  ];
+  return Object.entries(groups).sort(
+    ([typeA], [typeB]) => order.indexOf(typeA) - order.indexOf(typeB),
+  );
+})();
+---
+
+<Base
+  title="資訊工程"
+  description="劉承軒的資訊工程、資訊安全、競技程式與技術寫作紀錄。"
+  bodyClass="cs-page"
+>
+  <main class="shell">
+    <header class="cs-hero">
+      <p class="cs-hero__prompt"><span>$</span> whoami</p>
+      <h1>Shane Liu<span class="cs-cursor">_</span></h1>
+      <div class="cs-hero__meta">
+        <strong>Computer Science · Cybersecurity · Kotlin</strong>
+        <span>清華大學資訊工程博士生 / IS Lab</span>
+      </div>
+    </header>
+
+    <div class="cs-sections">
+      <section class="cs-section cs-focus">
+        <header class="cs-section__head">
+          <p class="cs-section__index">01 / FOCUS</p>
+          <h2>專長</h2>
+        </header>
+        <div class="cs-focus-metrics">
+          <a
+            class="cs-wakatime"
+            href={CS_PROFILE.wakatime.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={CS_PROFILE.wakatime.badge}
+              alt="WakaTime total time coded"
+              width="300"
+              height="30"
+              loading="lazy"
+            />
+            <span>{CS_PROFILE.wakatime.note}</span>
+          </a>
+          <a
+            class="cs-github-chart"
+            href={CS_PROFILE.github.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={CS_PROFILE.github.chart}
+              alt={`${CS_PROFILE.github.user} 的 GitHub 貢獻圖`}
+              loading="lazy"
+            />
+          </a>
+        </div>
+        <div class="cs-focus-groups">
+          <div class="cs-focus-group">
+            <h3>關注領域</h3>
+            <div class="cs-tags">
+              {CS_PROFILE.fields.map((item) => <span>{item}</span>)}
+            </div>
+          </div>
+          <div class="cs-focus-group">
+            <h3>擅長程式語言</h3>
+            <div class="cs-tags">
+              {CS_PROFILE.stack.map((item) => <span>{item}</span>)}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <header class="cs-section__head">
+          <p class="cs-section__index">02 / CURRENT</p>
+          <h2>現在進行式</h2>
+        </header>
+        <div data-expand-list>
+          <div class="cs-record-grid">
+            {
+              currentRecords.map((item, index) => (
+                <article
+                  class="cs-record-card"
+                  hidden={index >= 5}
+                  data-expand-item={index >= 5 || undefined}
+                >
+                  <p class="cs-record-card__meta">{formatExperienceDate(item)}</p>
+                  <h3>{primaryType(item) === "talk" ? summarizeExperience(item) : item.title}</h3>
+                  {primaryType(item) !== "talk" && describeExperience(item) && <p>{describeExperience(item)}</p>}
+                </article>
+              ))
+            }
+          </div>
+          {currentRecords.length > 5 && (
+            <button
+              class="expand-toggle"
+              type="button"
+              aria-expanded="false"
+              data-expand-button
+              data-show-label={`展開其餘 ${currentRecords.length - 5} 筆`}
+            >
+              展開其餘 {currentRecords.length - 5} 筆
+            </button>
+          )}
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <header class="cs-section__head">
+          <p class="cs-section__index">03 / ACHIEVEMENTS</p>
+          <h2>代表成果</h2>
+        </header>
+        <div data-expand-list>
+          <div class="cs-achievements">
+            {
+              achievementRecords.map((item, index) => (
+                <article hidden={index >= 5} data-expand-item={index >= 5 || undefined}>
+                  <time>{formatExperienceDate(item)}</time>
+                  <div>
+                    <h3>{primaryType(item) === "talk" ? summarizeExperience(item) : item.title}</h3>
+                    {primaryType(item) !== "talk" && describeExperience(item) && <p>{describeExperience(item)}</p>}
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+          {achievementRecords.length > 5 && (
+            <button
+              class="expand-toggle"
+              type="button"
+              aria-expanded="false"
+              data-expand-button
+              data-show-label={`展開其餘 ${achievementRecords.length - 5} 筆`}
+            >
+              展開其餘 {achievementRecords.length - 5} 筆
+            </button>
+          )}
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <header class="cs-section__head">
+          <p class="cs-section__index">04 / TIMELINE</p>
+          <h2>時間軸</h2>
+        </header>
+        <ol class="cs-timeline">
+          {
+            EXPERIENCE_DB.learningTimeline.map((entry) => (
+              <li class="cs-timeline__item">
+                <time>{entry.stage}</time>
+                <ul>
+                  {entry.items.map((item) => <li>{item}</li>)}
+                </ul>
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+
+      <section class="cs-section">
+        <header class="cs-section__head">
+          <p class="cs-section__index">05 / EXPERIENCE</p>
+          <h2>經歷</h2>
+          <p>{experienceRecords.length} 筆資訊工程與資訊安全紀錄</p>
+        </header>
+        <div class="cs-experience-groups">
+          {
+            experienceGroups.map(([type, records]) => (
+              <section class="cs-experience-group" data-expand-list>
+                <h3 id={`experience-${type}`} data-toc-item>
+                  {EXPERIENCE_DB.taxonomies.types[type]}
+                </h3>
+                <div class="cs-experience-list">
+                  {records.map((item, index) => (
+                    <article
+                      class:list={{ "cs-experience-list__nodate": type === "certification" }}
+                      hidden={index >= 5}
+                      data-expand-item={index >= 5 || undefined}
+                    >
+                      {type !== "certification" && <time>{formatExperienceDate(item)}</time>}
+                      <div>
+                        <h4>{primaryType(item) === "talk" ? summarizeExperience(item) : item.title}</h4>
+                        {primaryType(item) !== "talk" && describeExperience(item) && <p>{describeExperience(item)}</p>}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+                {records.length > 5 && (
+                  <button
+                    class="expand-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    data-expand-button
+                    data-show-label={`展開其餘 ${records.length - 5} 筆`}
+                  >
+                    展開其餘 {records.length - 5} 筆
+                  </button>
+                )}
+              </section>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <header class="cs-section__head">
+          <p class="cs-section__index">06 / PROJECTS</p>
+          <h2>專案</h2>
+          <p>{projectRecords.length} 個收錄於經歷資料庫的開發專案</p>
+        </header>
+        <div data-expand-list>
+          <div class="cs-projects">
+            {
+              projectRecords.map((item, index) => (
+                <article
+                  class="cs-project"
+                  hidden={index >= 5}
+                  data-expand-item={index >= 5 || undefined}
+                >
+                  <h3>{item.title}</h3>
+                  {describeExperience(item) && <p>{describeExperience(item)}</p>}
+                  {
+                    item.links.length > 0 && (
+                      <ul>
+                        {item.links.map((link) => (
+                          <li><a href={link.url}>{link.label} ↗</a></li>
+                        ))}
+                      </ul>
+                    )
+                  }
+                </article>
+              ))
+            }
+          </div>
+          {projectRecords.length > 5 && (
+            <button
+              class="expand-toggle"
+              type="button"
+              aria-expanded="false"
+              data-expand-button
+              data-show-label={`展開其餘 ${projectRecords.length - 5} 筆`}
+            >
+              展開其餘 {projectRecords.length - 5} 筆
+            </button>
+          )}
+        </div>
+      </section>
+    </div>
+  </main>
+  <ExpandListScript />
+</Base>

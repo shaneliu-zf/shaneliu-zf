@@ -1,0 +1,369 @@
+---
+import Base from "../../layouts/Base.astro";
+import ExpandListScript from "../../components/ExpandListScript.astro";
+import {
+  EXPERIENCES,
+  EXPERIENCE_DB,
+  EXPERIENCE_ARCHIVE_SECTIONS,
+  DOMAIN_OPTIONS,
+  TYPE_OPTIONS,
+  formatExperienceDate,
+  getEducationNote,
+  getRoleLabels,
+  getTypeLabels,
+  hasType,
+  primaryType,
+  describeExperience,
+  summarizeExperience,
+} from "../../lib/experiences";
+import "../../styles/experiences.css";
+
+const statusOptions = [
+  ["current", "進行中"],
+  ["completed", "已完成"],
+  ["upcoming", "預定"],
+  ["cancelled", "已取消"],
+] as const;
+
+const getCertificationLevel = (item: (typeof EXPERIENCES)[number]) =>
+  item.id === "milestone-wca-registration" ? "" : item.result?.trim() || "";
+
+const yearOptions = (() => {
+  const years = new Set<string>();
+  for (const item of EXPERIENCES) {
+    for (const value of [item.startDate, item.endDate]) {
+      const year = value?.slice(0, 4);
+      if (year) years.add(year);
+    }
+  }
+  return [...years].sort((a, b) => Number(b) - Number(a));
+})();
+
+const statusPriority = { current: 2, upcoming: 1, completed: 0, cancelled: -1 };
+const byImportance = (
+  a: (typeof EXPERIENCES)[number],
+  b: (typeof EXPERIENCES)[number],
+) =>
+  Number(b.featured) - Number(a.featured) ||
+  statusPriority[b.status] - statusPriority[a.status] ||
+  (b.startDate ?? "").localeCompare(a.startDate ?? "");
+---
+
+<Base
+  title="完整經歷"
+  description="劉承軒的完整跨領域經歷資料庫，涵蓋資工、資安、魔術、催眠、魔術方塊、表演、音樂與組織活動。"
+>
+  <main class="shell archive-page">
+    <header class="archive-hero">
+      <p class="eyebrow">$ cat life-archive.json</p>
+      <h1>完整經歷</h1>
+    </header>
+
+    {
+      EXPERIENCE_ARCHIVE_SECTIONS.map((section) => {
+        const items = [...section.items].sort(byImportance);
+        const remaining = Math.max(0, items.length - 5);
+        return (
+          <section class="archive-group" id={section.id}>
+          <header class="archive-group__head">
+            <h2>{section.title}</h2>
+          </header>
+          {
+            items.length === 0 ? (
+              <p class="archive-group__empty">尚無資料。</p>
+            ) : section.id === "certification" ? (
+              <div data-expand-list>
+                <div class="archive-table-wrap">
+                  <table class="archive-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">證照</th>
+                        <th scope="col">等級</th>
+                        <th scope="col">頒發單位</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {items.map((item, index) => (
+                        <tr hidden={index >= 5} data-expand-item={index >= 5 || undefined}>
+                          <td><strong>{item.title}</strong></td>
+                          <td>{getCertificationLevel(item) || "—"}</td>
+                          <td>{item.organization || "—"}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                {remaining > 0 && (
+                  <button
+                    class="expand-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    data-expand-button
+                    data-show-label={`展開其餘 ${remaining} 筆`}
+                  >
+                    展開其餘 {remaining} 筆
+                  </button>
+                )}
+              </div>
+            ) : (
+              <div data-expand-list>
+                <div class="archive-table-wrap">
+                  <table class="archive-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">時間</th>
+                        <th scope="col">名稱</th>
+                        {section.id !== "education" && <th scope="col">描述</th>}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {items.map((item, index) => {
+                        const isEducation = section.id === "education";
+                        const isTalk = primaryType(item) === "talk";
+                        const note = isEducation ? getEducationNote(item) : "";
+                        const name = isTalk ? summarizeExperience(item) : item.title;
+                        const detail = isEducation || isTalk ? "" : describeExperience(item);
+                        return (
+                          <tr hidden={index >= 5} data-expand-item={index >= 5 || undefined}>
+                            <td>{formatExperienceDate(item)}</td>
+                            <td>
+                              <strong>{name}</strong>
+                              {isEducation
+                                ? note && <span class="archive-table__sub">{note}</span>
+                                : !isTalk &&
+                                  item.location && (
+                                    <span class="archive-table__sub">{item.location}</span>
+                                  )}
+                            </td>
+                            {!isEducation && <td>{detail}</td>}
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+                {remaining > 0 && (
+                  <button
+                    class="expand-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    data-expand-button
+                    data-show-label={`展開其餘 ${remaining} 筆`}
+                  >
+                    展開其餘 {remaining} 筆
+                  </button>
+                )}
+              </div>
+            )
+          }
+          </section>
+        );
+      })
+    }
+
+    <section class="database-section" id="all">
+      <header class="archive-group__head">
+        <h2>經歷總表</h2>
+        <p>{EXPERIENCES.length} 筆，可篩選</p>
+      </header>
+
+      <div class="archive-filters">
+        <label class="archive-search">
+          <span>搜尋</span>
+          <input type="search" placeholder="名稱、單位、角色、結果……" data-archive-search />
+        </label>
+        <button type="button" data-archive-reset>清除</button>
+        <output data-archive-count>{EXPERIENCES.length} 筆</output>
+
+        <fieldset class="archive-check-filters">
+          <legend>領域</legend>
+          <div class="archive-check-filters__options" data-archive-domains>
+            {DOMAIN_OPTIONS.map(([value, label]) => (
+              <label>
+                <input type="checkbox" value={value} />
+                <span>{label}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset class="archive-check-filters">
+          <legend>類型</legend>
+          <div class="archive-check-filters__options" data-archive-types>
+            {TYPE_OPTIONS.map(([value, label]) => (
+              <label>
+                <input type="checkbox" value={value} />
+                <span>{label}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset class="archive-check-filters">
+          <legend>狀態</legend>
+          <div class="archive-check-filters__options" data-archive-statuses>
+            {statusOptions.map(([value, label]) => (
+              <label>
+                <input type="checkbox" value={value} />
+                <span>{label}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset class="archive-check-filters">
+          <legend>年份</legend>
+          <div class="archive-check-filters__options" data-archive-years>
+            {yearOptions.map((year) => (
+              <label>
+                <input type="checkbox" value={year} />
+                <span>{year}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="experience-list" data-archive-list>
+        {
+          EXPERIENCES.map((item) => {
+            const domainLabels = item.domains.map((domain) => EXPERIENCE_DB.taxonomies.domains[domain]);
+            const typeLabels = getTypeLabels(item);
+            const line = primaryType(item) === "talk" ? summarizeExperience(item) : item.title;
+            const note = describeExperience(item);
+            const searchText = [
+              item.title,
+              item.organization,
+              item.result,
+              item.description,
+              line,
+              note,
+              ...domainLabels,
+              ...typeLabels,
+              ...getRoleLabels(item),
+            ]
+              .filter(Boolean)
+              .join(" ")
+              .toLocaleLowerCase("zh-Hant");
+
+            const startYear = item.startDate?.slice(0, 4) ?? "";
+            const endYear =
+              item.status === "current"
+                ? "9999"
+                : item.endDate?.slice(0, 4) || startYear;
+
+            return (
+              <article
+                class="experience-row"
+                data-archive-item
+                data-domains={item.domains.join(" ")}
+                data-types={item.types.join(" ")}
+                data-status={item.status}
+                data-start={startYear}
+                data-end={endYear}
+                data-search={searchText}
+              >
+                <div class="experience-row__meta">
+                  {!hasType(item, "certification") && <time>{formatExperienceDate(item)}</time>}
+                  <span>{typeLabels.join("・")}</span>
+                </div>
+                <div class="experience-row__content">
+                  <div class="experience-row__title">
+                    <h3>{line}</h3>
+                    {item.featured && <span class="featured-mark">Featured</span>}
+                  </div>
+                  {note && <p>{note}</p>}
+                  <ul class="experience-row__tags">
+                    {domainLabels.map((label) => <li>{label}</li>)}
+                  </ul>
+                  {
+                    item.links.length > 0 && (
+                      <ul class="experience-row__links">
+                        {item.links.map((link) => <li><a href={link.url}>{link.label} ↗</a></li>)}
+                      </ul>
+                    )
+                  }
+                </div>
+              </article>
+            );
+          })
+        }
+      </div>
+      <p class="archive-empty" hidden data-archive-empty>沒有符合條件的經歷。</p>
+    </section>
+  </main>
+  <ExpandListScript />
+</Base>
+
+<script>
+  const search = document.querySelector<HTMLInputElement>("[data-archive-search]");
+  const domainChecks = [
+    ...document.querySelectorAll<HTMLInputElement>("[data-archive-domains] input[type='checkbox']"),
+  ];
+  const typeChecks = [
+    ...document.querySelectorAll<HTMLInputElement>("[data-archive-types] input[type='checkbox']"),
+  ];
+  const statusChecks = [
+    ...document.querySelectorAll<HTMLInputElement>("[data-archive-statuses] input[type='checkbox']"),
+  ];
+  const yearChecks = [
+    ...document.querySelectorAll<HTMLInputElement>("[data-archive-years] input[type='checkbox']"),
+  ];
+  const reset = document.querySelector<HTMLButtonElement>("[data-archive-reset]");
+  const count = document.querySelector<HTMLOutputElement>("[data-archive-count]");
+  const empty = document.querySelector<HTMLElement>("[data-archive-empty]");
+  const items = [...document.querySelectorAll<HTMLElement>("[data-archive-item]")];
+
+  const selectedValues = (inputs: HTMLInputElement[]) =>
+    inputs.filter((input) => input.checked).map((input) => input.value);
+
+  const overlapsYears = (item: HTMLElement, years: string[]) => {
+    if (years.length === 0) return true;
+    const start = item.dataset.start ?? "";
+    const end = item.dataset.end ?? "";
+    if (!start && !end) return false;
+    const itemStart = Number(start || end);
+    const itemEnd = Number(end || start);
+    return years.some((year) => {
+      const y = Number(year);
+      return itemStart <= y && y <= itemEnd;
+    });
+  };
+
+  const applyFilters = () => {
+    const query = search?.value.trim().toLocaleLowerCase("zh-Hant") ?? "";
+    const domains = selectedValues(domainChecks);
+    const types = selectedValues(typeChecks);
+    const statuses = selectedValues(statusChecks);
+    const years = selectedValues(yearChecks);
+    let visible = 0;
+
+    for (const item of items) {
+      const itemDomains = item.dataset.domains?.split(" ").filter(Boolean) ?? [];
+      const itemTypes = item.dataset.types?.split(" ").filter(Boolean) ?? [];
+      const matches =
+        (!query || item.dataset.search?.includes(query)) &&
+        (domains.length === 0 || domains.some((domain) => itemDomains.includes(domain))) &&
+        (types.length === 0 || types.some((type) => itemTypes.includes(type))) &&
+        (statuses.length === 0 || statuses.includes(item.dataset.status ?? "")) &&
+        overlapsYears(item, years);
+      item.hidden = !matches;
+      if (matches) visible += 1;
+    }
+
+    if (count) count.textContent = `${visible} 筆`;
+    if (empty) empty.hidden = visible > 0;
+  };
+
+  const allChecks = [...domainChecks, ...typeChecks, ...statusChecks, ...yearChecks];
+
+  search?.addEventListener("input", applyFilters);
+  allChecks.forEach((input) => input.addEventListener("change", applyFilters));
+  reset?.addEventListener("click", () => {
+    if (search) search.value = "";
+    allChecks.forEach((input) => {
+      input.checked = false;
+    });
+    applyFilters();
+  });
+</script>

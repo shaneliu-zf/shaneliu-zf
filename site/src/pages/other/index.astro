@@ -1,0 +1,9 @@
+---
+import DomainArchive from "../../components/DomainArchive.astro";
+import { getDomainPage } from "../../data/domain-pages";
+
+const page = getDomainPage("other");
+if (!page) throw new Error("找不到其他領域頁設定");
+---
+
+<DomainArchive page={page} />

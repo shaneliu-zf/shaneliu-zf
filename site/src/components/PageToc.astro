@@ -1,0 +1,81 @@
+<aside class="page-toc" aria-label="本頁目錄" hidden data-page-toc-root>
+  <nav>
+    <ol data-page-toc-list></ol>
+  </nav>
+</aside>
+
+<script>
+  const toc = document.querySelector<HTMLElement>("[data-page-toc-root]");
+  const list = document.querySelector<HTMLOListElement>("[data-page-toc-list]");
+  const main = document.querySelector<HTMLElement>("main");
+
+  if (toc && list && main) {
+    const headings = [
+      ...main.querySelectorAll<HTMLHeadingElement>("h2, [data-toc-item]"),
+    ].filter((heading) => !heading.closest("[data-page-toc-ignore]"));
+
+    if (headings.length > 0) {
+      const usedIds = new Set<string>();
+      const slugify = (text: string) =>
+        text
+          .trim()
+          .toLocaleLowerCase("zh-Hant")
+          .replace(/\s+/g, "-")
+          .replace(/[^\p{L}\p{N}_-]+/gu, "") || "section";
+
+      headings.forEach((heading, index) => {
+        const section = heading.closest<HTMLElement>("section[id]");
+        let id = heading.id || section?.id || slugify(heading.textContent || "") || `section-${index + 1}`;
+        const baseId = id;
+        let suffix = 2;
+        while (usedIds.has(id)) id = `${baseId}-${suffix++}`;
+        usedIds.add(id);
+        heading.id = id;
+
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        const nested = heading.matches("[data-toc-item]") || heading.tagName !== "H2";
+        link.href = `#${id}`;
+        link.textContent = heading.textContent?.replace(/^##\s*/, "").trim() || `區段 ${index + 1}`;
+        link.dataset.tocLink = id;
+        if (nested) {
+          item.classList.add("page-toc__sub");
+          link.dataset.tocLevel = "3";
+        }
+        item.append(link);
+        list.append(item);
+      });
+
+      toc.hidden = false;
+      document.body.classList.add("toc-ready");
+
+      const links = [...list.querySelectorAll<HTMLAnchorElement>("[data-toc-link]")];
+      const setActive = (id: string) => {
+        links.forEach((link) => {
+          const active = link.dataset.tocLink === id;
+          link.classList.toggle("is-active", active);
+          if (active) {
+            link.setAttribute("aria-current", "location");
+            link.scrollIntoView({ block: "nearest", inline: "nearest" });
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      };
+
+      setActive(headings[0].id);
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+          if (visible[0]) setActive((visible[0].target as HTMLElement).id);
+        },
+        { rootMargin: "-18% 0px -70% 0px", threshold: 0 },
+      );
+
+      headings.forEach((heading) => observer.observe(heading));
+    }
+  }
+</script>

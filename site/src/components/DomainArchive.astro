@@ -1,0 +1,105 @@
+---
+import Base from "../layouts/Base.astro";
+import {
+  getDomainExperiences,
+  getDomainSkills,
+  type DomainPageData,
+} from "../data/domain-pages";
+import {
+  formatExperienceDate,
+  describeExperience,
+  summarizeExperience,
+  getTypeLabels,
+  hasType,
+  primaryType,
+} from "../lib/experiences";
+import "../styles/domain.css";
+
+interface Props {
+  page: DomainPageData;
+}
+
+const { page } = Astro.props;
+const skills = getDomainSkills(page);
+const experiences = getDomainExperiences(page);
+---
+
+<Base title={page.title} description={page.description}>
+  <main class="shell domain-archive" style={`--domain-accent: var(--${page.accent})`}>
+    <header class="domain-hero">
+      <a class="domain-back" href="/">← 回到首頁</a>
+      <p class="eyebrow">{page.eyebrow}</p>
+      <h1>{page.title}</h1>
+      <p>{page.description}</p>
+      <dl>
+        <div><dt>Skills</dt><dd>{skills.reduce((total, skill) => total + skill.items.length, 0)}</dd></div>
+        <div><dt>結構化經歷</dt><dd>{experiences.length}</dd></div>
+        <div><dt>完整文件</dt><dd>{page.documents.length}</dd></div>
+      </dl>
+    </header>
+
+    <section class="domain-section" id="skills">
+      <header>
+        <p class="eyebrow">Skills & Interests</p>
+        <h2>Skills</h2>
+      </header>
+      <div class="domain-skill-grid">
+        {
+          skills.map((skill) => (
+            <article>
+              <h3>{skill.title}</h3>
+              <ul>
+                {skill.items.map((item) => <li>{item}</li>)}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="domain-section" id="experiences">
+      <header>
+        <p class="eyebrow">Structured Data</p>
+        <h2>相關經歷</h2>
+      </header>
+      {
+        experiences.length > 0 ? (
+          <ol class="domain-experience-list">
+            {experiences.map((experience) => (
+              <li>
+                <div class="domain-experience-meta">
+                  {!hasType(experience, "certification") && (
+                    <time>{formatExperienceDate(experience)}</time>
+                  )}
+                  <span>{getTypeLabels(experience).join("・")}</span>
+                </div>
+                <div>
+                  <h3>{primaryType(experience) === "talk" ? summarizeExperience(experience) : experience.title}</h3>
+                  {primaryType(experience) !== "talk" && describeExperience(experience) && (
+                    <p>{describeExperience(experience)}</p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p class="domain-empty">
+            目前 JSON 尚未有這個領域的結構化經歷；下方仍會完整列出 GitHub 原始紀錄。
+          </p>
+        )
+      }
+    </section>
+
+    {
+      page.documents.map((document, index) => (
+        <section class="domain-document" id={`document-${index}`}>
+          <header class="domain-document__meta">
+            <h2>{document.label}</h2>
+            <code>{document.source}</code>
+          </header>
+          <div class="domain-markdown" set:html={document.html} />
+        </section>
+      ))
+    }
+  </main>
+</Base>

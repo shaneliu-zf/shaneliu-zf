@@ -1,0 +1,5658 @@
+{
+  "version": 1,
+  "taxonomies": {
+    "domains": {
+      "cs": "資訊工程",
+      "security": "資訊安全",
+      "law": "法律",
+      "magic": "魔術",
+      "hypnosis": "催眠",
+      "cubing": "魔術方塊",
+      "performance": "表演與雜技",
+      "education": "教育",
+      "other": "其他"
+    },
+    "types": {
+      "work": "工作",
+      "education": "學歷",
+      "research": "研究",
+      "certification": "證照",
+      "competition": "競賽",
+      "course": "課程與培訓",
+      "talk": "演講",
+      "event": "活動",
+      "performance": "表演",
+      "teaching": "教學",
+      "publication": "寫作／出版",
+      "project": "專案",
+      "community": "社群與組織"
+    },
+    "roles": {
+      "student": "學生",
+      "researcher": "研究者",
+      "intern": "實習生",
+      "engineer": "工程師",
+      "contestant": "參賽者",
+      "speaker": "講者",
+      "instructor": "講師",
+      "teacher": "老師",
+      "organizer": "主辦人",
+      "host": "主持人",
+      "staff": "工作人員",
+      "performer": "表演者",
+      "consultant": "顧問",
+      "editor": "校稿者",
+      "founder": "創辦人",
+      "administrator": "管理員",
+      "author": "作者",
+      "member": "成員",
+      "attendee": "參與者",
+      "judge": "裁判",
+      "scrambler": "打亂員",
+      "assistant": "助教",
+      "director": "導播／製播",
+      "leader": "組長／隊長",
+      "representative": "代表",
+      "sales": "業務",
+      "proofreader": "校稿者",
+      "backstage": "幕後工作人員",
+      "developer": "開發者"
+    }
+  },
+  "experiences": [
+    {
+      "id": "nthu-cs-phd",
+      "title": "國立清華大學 資訊工程學系博士班",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2026",
+      "endDate": null,
+      "datePrecision": "year",
+      "status": "current",
+      "result": "碩士逕讀博士，現在在孫宏民教授的 IS Lab",
+      "roles": [
+        "student",
+        "researcher"
+      ],
+      "organization": "國立清華大學",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "education"
+      ]
+    },
+    {
+      "id": "ibm-consultant-intern-2026",
+      "title": "IBM",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2026",
+      "endDate": null,
+      "datePrecision": "year",
+      "status": "current",
+      "result": "Associate Application Consultant Summer Intern",
+      "roles": [
+        "intern",
+        "consultant"
+      ],
+      "organization": "IBM",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "work"
+      ]
+    },
+    {
+      "id": "coscup-2026-kotlin-dsl",
+      "title": "打造你自己的 Kotlin DSL",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2026",
+      "endDate": "2026",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "COSCUP 2026 講者",
+      "roles": [
+        "speaker"
+      ],
+      "organization": "COSCUP",
+      "location": "台灣",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "ais3-junior-2026",
+      "title": "CTF 入門導論",
+      "domains": [
+        "cs",
+        "security",
+        "education"
+      ],
+      "startDate": "2026",
+      "endDate": "2026",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "AIS3 Junior 2026 講師",
+      "roles": [
+        "speaker",
+        "instructor"
+      ],
+      "organization": "AIS3 Junior",
+      "location": "台灣",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "magic-talk-2026-006",
+      "title": "清華大學魔術社與交大魔術社共同社課 特邀講師",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2026",
+      "endDate": "2026",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "清華大學魔術社與交大魔術社共同社課 特邀講師",
+      "roles": [
+        "instructor"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "magic-talk-2026-005",
+      "title": "清華大學魔術社與交大魔術社共同寒訓 講師",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2026",
+      "endDate": "2026",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "清華大學魔術社與交大魔術社共同寒訓 講師",
+      "roles": [
+        "instructor"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "magic-production-2026-005",
+      "title": "台灣心靈魔術與療癒學會心靈魔術大會及台灣心靈魔術大賽 燈控師",
+      "domains": [
+        "magic",
+        "performance"
+      ],
+      "startDate": "2026",
+      "endDate": "2026",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "燈控師",
+      "roles": [
+        "backstage"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "performance"
+      ]
+    },
+    {
+      "id": "tma-2025",
+      "title": "TMA 台灣國際魔術大賽",
+      "domains": [
+        "magic",
+        "performance"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "台灣代表選手",
+      "roles": [
+        "contestant",
+        "performer",
+        "representative"
+      ],
+      "organization": "TMA",
+      "location": "台灣",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "ptsd-magic-tutorial",
+      "title": "紙牌純手法魔術教學《PTSD》",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "與中國空盒子魔術合作發表",
+      "roles": [
+        "author",
+        "instructor"
+      ],
+      "organization": "空盒子魔術",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "publication"
+      ]
+    },
+    {
+      "id": "nthu-iis-lab",
+      "title": "資訊安全實驗室 IS Lab",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2025",
+      "endDate": null,
+      "datePrecision": "year",
+      "status": "current",
+      "result": null,
+      "roles": [
+        "student",
+        "researcher"
+      ],
+      "organization": "國立清華大學",
+      "location": "新竹",
+      "description": "指導老師：孫宏民教授",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "research"
+      ]
+    },
+    {
+      "id": "coscup-2025-code-golf",
+      "title": "Code Golf 的黑魔法",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "COSCUP 2025 JVM 閃電講講者",
+      "roles": [
+        "speaker"
+      ],
+      "organization": "COSCUP",
+      "location": "台灣",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "magic-publication-2025-002",
+      "title": "台灣催眠表演教學《空雨傘》上冊台版校稿者",
+      "domains": [
+        "magic",
+        "hypnosis"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "proofreader",
+        "performer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "publication"
+      ]
+    },
+    {
+      "id": "magic-production-2025-003",
+      "title": "NEPOCH 全國高中職魔術大賽 燈控師",
+      "domains": [
+        "magic",
+        "performance"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "燈控師",
+      "roles": [
+        "backstage"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "performance"
+      ]
+    },
+    {
+      "id": "magic-production-2025-002",
+      "title": "桃園銘傳魔術社魔幻之夜《十年之約》follow 燈負責人",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "燈負責人",
+      "roles": [
+        "backstage",
+        "organizer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "performance"
+      ]
+    },
+    {
+      "id": "cs-talk-2025-004",
+      "title": "這不是你平常寫的Kotlin:Code Golf 的黑魔法",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "TKUG Kotlin MeetUp 講者",
+      "roles": [
+        "speaker"
+      ],
+      "organization": "TKUG Kotlin MeetUp",
+      "location": "Dcard",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "tupc-2024",
+      "title": "TUPC 2024 全國科技大專校院程式競賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "金獎第三名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": "TUPC",
+      "location": "台灣",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "icpc-taiwan-2024",
+      "title": "ICPC 2024 台灣站",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "銅獎第一名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": "ICPC",
+      "location": "台灣",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "organized-event-2024-030",
+      "title": "TKUG Kotlin meetup #11",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "總召",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "言文字",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2024-029",
+      "title": "TDNA 台灣數位遊牧者大會2024",
+      "domains": [
+        "other"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "TKUG擺攤",
+      "roles": [
+        "member"
+      ],
+      "organization": null,
+      "location": "張榮發國際會議中心",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2024-028",
+      "title": "百戲實戰交流活動：記憶",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "總召",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2024-027",
+      "title": "COSCUP開源人年會",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "TKUG擺攤",
+      "roles": [
+        "member"
+      ],
+      "organization": null,
+      "location": "臺灣科技大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "mind-invisible-editor-2024",
+      "title": "心靈魔術《心無形 Hidden Influence by Kenton Knepper》台版",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "台版校稿者",
+      "roles": [
+        "editor",
+        "proofreader"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "publication"
+      ]
+    },
+    {
+      "id": "magic-production-2024-001",
+      "title": "原色魔術劇場《人生超爽這樣過：完全攻略》後台負責人",
+      "domains": [
+        "magic",
+        "performance"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "原色魔術劇場《人生超爽這樣過：完全攻略》後台負責人",
+      "roles": [
+        "backstage",
+        "organizer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "performance"
+      ]
+    },
+    {
+      "id": "magic-event-2024-011",
+      "title": "台北國際魔術節",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "觀眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-event-2024-010",
+      "title": "G 魔法系統分享大會",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "觀眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "劍潭青年活動中心",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-event-2024-009",
+      "title": "808國際魔術大會",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "觀眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "劍潭青年活動中心",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "cubing-event-2024-007",
+      "title": "2024 新竹冬季公開賽",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "工作人員、裁判、轉亂員",
+      "roles": [
+        "judge",
+        "scrambler",
+        "staff"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "tupc-2023",
+      "title": "TUPC 2023 全國科技大專校院程式競賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "冠軍（金獎第一名）",
+      "roles": [
+        "contestant"
+      ],
+      "organization": "TUPC",
+      "location": "台灣",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "icpc-taiwan-2023",
+      "title": "ICPC 2023 台灣站",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "銅獎",
+      "roles": [
+        "contestant"
+      ],
+      "organization": "ICPC",
+      "location": "台灣",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "hacker-cat-club-2023",
+      "title": "臺北科技大學駭客喵喵社",
+      "domains": [
+        "security"
+      ],
+      "startDate": "2023",
+      "endDate": null,
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "副社長（創社幹部）",
+      "roles": [
+        "founder",
+        "administrator",
+        "leader"
+      ],
+      "organization": "國立台北科技大學",
+      "location": "台北",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "domains": [
+        "magic",
+        "hypnosis"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "organizer",
+        "host",
+        "speaker"
+      ],
+      "organization": null,
+      "description": "與催眠魔術師炫合辦",
+      "links": [],
+      "images": [],
+      "id": "double-shane-taipei-2023",
+      "title": "《雙重Shane實》催眠體驗坊台北場",
+      "location": "台北",
+      "featured": true,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "domains": [
+        "magic",
+        "hypnosis"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "organizer",
+        "host",
+        "speaker"
+      ],
+      "organization": null,
+      "description": "與催眠魔術師炫合辦",
+      "links": [],
+      "images": [],
+      "id": "double-shane-hsinchu-2023",
+      "title": "《雙重Shane實》催眠體驗坊新竹場",
+      "location": "新竹",
+      "featured": true,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2023-025",
+      "title": "COSCUP開源人年會",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "場務組組員",
+      "roles": [
+        "staff"
+      ],
+      "organization": null,
+      "location": "臺灣科技大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2023-023",
+      "title": "KotlinConf' 23 Global Watch Party 台灣場",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "主持人",
+      "roles": [
+        "host"
+      ],
+      "organization": null,
+      "location": "獺空間",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2023-022",
+      "title": "WTM國際女人節",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "場務組組員、TKUG擺攤",
+      "roles": [
+        "staff"
+      ],
+      "organization": null,
+      "location": "台北科技大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2023-021",
+      "title": "Android Taipei Jetpack Compose workshop",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "助教",
+      "roles": [
+        "assistant"
+      ],
+      "organization": null,
+      "location": "拼貼趣",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-talk-2023-003",
+      "title": "築夢島 新竹交流會",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "近距離魔術講座",
+      "roles": [
+        "member"
+      ],
+      "organization": null,
+      "location": "築夢島魔術交流空間",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "magic-talk-2023-002",
+      "title": "《百戲｜初衷》交流會",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "沿桌魔術講座",
+      "roles": [
+        "member"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "magic-performance-2023-002",
+      "title": "臺北市私立泰北高中校慶",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "魔術社招生表演",
+      "roles": [
+        "performer"
+      ],
+      "organization": null,
+      "location": "臺北市私立泰北高中",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "performance"
+      ]
+    },
+    {
+      "id": "magic-event-2023-008",
+      "title": "日本線上魔術大會 NMF 37th",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "觀眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "ZOOM",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-event-2023-007",
+      "title": "日本線上魔術大會 NMF 36th",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "觀眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "ZOOM",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-event-2023-006",
+      "title": "808國際魔術大會",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "觀眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "劍潭青年活動中心",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "ithome-ironman-2023",
+      "title": "IThome 鐵人賽 2023",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "完賽",
+      "roles": [
+        "contestant",
+        "author"
+      ],
+      "organization": "IThome",
+      "location": "線上",
+      "description": "主題《那些寫程式的宗教戰爭》",
+      "links": [
+        {
+          "label": "鐵人賽系列",
+          "url": "https://ithelp.ithome.com.tw/users/20133574/ironman/6679",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition",
+        "publication"
+      ]
+    },
+    {
+      "id": "cubing-competition-2023-005",
+      "title": "2023 夢想一號魔術方塊春季講師線上賽",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "季軍",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-talk-2023-003",
+      "title": "魔術方塊教學",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "專業講師",
+      "roles": [
+        "speaker",
+        "instructor"
+      ],
+      "organization": "北科追夢康輔社 玩轉魔方課程",
+      "location": "台北科大",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "cs-talk-2023-002",
+      "title": "Kotlin2.0 介紹",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "KotlinConf' 23 Global Watch Party 台灣場 講者",
+      "roles": [
+        "speaker"
+      ],
+      "organization": "KotlinConf' 23 Global Watch Party 台灣場",
+      "location": "獺空間",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "cs-talk-2023-001",
+      "title": "Kotlin函式語法",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "Taiwan Kotlin User Group 線上 Kotlin 讀書會 講者",
+      "roles": [
+        "speaker"
+      ],
+      "organization": "Taiwan Kotlin User Group 線上 Kotlin 讀書會",
+      "location": "線上",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "cs-competition-2023-041",
+      "title": "NCPC全國電腦軟體設計競賽決賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第四十六名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2023-040",
+      "title": "NCPC全國電腦軟體設計競賽初賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第十二名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "attended-event-2023-008",
+      "title": "WTM I am Remarkable 工作坊",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "會眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "台北",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "attended-event-2023-007",
+      "title": "Regional Scrum Gathering TAIPEI 2023",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "會眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "松菸文創園區",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "android-taipei-clean-code-2023",
+      "title": "Clean Code：如何寫好一個程式",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "講者",
+      "roles": [
+        "speaker"
+      ],
+      "organization": "Android Taipei",
+      "location": "拼貼趣",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "gdsc-cycu-clean-code-2023",
+      "title": "Clean Code：如何寫好一個程式",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "講者",
+      "roles": [
+        "speaker"
+      ],
+      "organization": "中原 GDSC 社課",
+      "location": "中原大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "talk"
+      ]
+    },
+    {
+      "id": "organized-event-2022-020",
+      "title": "TKUG Kotlin meetup #9",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "公關組組員、招待組組員",
+      "roles": [
+        "staff"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2022-019",
+      "title": "TKUG Kotlin meetup #7",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "招待組",
+      "roles": [
+        "staff"
+      ],
+      "organization": null,
+      "location": "Dcard",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2022-018",
+      "title": "北科資工系迎新",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "副召",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "臺北科技大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2022-017",
+      "title": "COSCUP開源人年會",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "場務組組員",
+      "roles": [
+        "staff"
+      ],
+      "organization": null,
+      "location": "臺灣科技大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-event-2022-005",
+      "title": "第三屆台灣線上魔術大會OMG",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "觀眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "youtube",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-event-2022-004",
+      "title": "Avi Yap世界巡迴台灣站 魔術研習會",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "學員",
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": "8082樓",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "ithome-ironman-2022",
+      "title": "IThome 鐵人賽 2022",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant",
+        "author"
+      ],
+      "organization": "IThome",
+      "location": "線上",
+      "description": "主題《櫛風風的「完全不會寫程式，從零開始的 Kotlin 教學」》",
+      "links": [
+        {
+          "label": "鐵人賽系列",
+          "url": "https://ithelp.ithome.com.tw/users/20133574/ironman/5353",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition",
+        "publication"
+      ]
+    },
+    {
+      "id": "global-cybersecurity-camp-2022",
+      "title": "Global Cybersecurity Camp 2022",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "小組以 C++ 完成可繞過防毒的木馬研究",
+      "roles": [
+        "student",
+        "researcher"
+      ],
+      "organization": "Global Cybersecurity Camp",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "id": "cubing-event-2022-006",
+      "title": "2022 夢想一號學員賽",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "工作人員、選手",
+      "roles": [
+        "staff",
+        "contestant"
+      ],
+      "organization": null,
+      "location": "科學教育館",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cubing-event-2022-005",
+      "title": "新光盃魔術方塊大賽",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "工作人員、裁判",
+      "roles": [
+        "judge",
+        "staff"
+      ],
+      "organization": null,
+      "location": "新光人壽保險摩天大樓",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cubing-event-2022-004",
+      "title": "小丸號第十四屆魔術方塊公開賽",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "選手、轉亂員、裁判",
+      "roles": [
+        "judge",
+        "scrambler",
+        "contestant"
+      ],
+      "organization": null,
+      "location": "台南",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cubing-event-2022-003",
+      "title": "魔術方塊台灣錦標賽",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "選手、轉亂員、裁判",
+      "roles": [
+        "judge",
+        "scrambler",
+        "contestant"
+      ],
+      "organization": null,
+      "location": "新光人壽新板大樓",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cubing-event-2022-002",
+      "title": "魔術方塊台灣公開賽",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "選手、轉亂員、裁判",
+      "roles": [
+        "judge",
+        "scrambler",
+        "contestant"
+      ],
+      "organization": null,
+      "location": "新光人壽新板大樓",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2022-039",
+      "title": "ICPC Taoyuan site",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第六十九名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2022-038",
+      "title": "TOPC",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第五十二名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2022-037",
+      "title": "NCPC全國電腦軟體設計競賽決賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第四十五名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2022-036",
+      "title": "NCPC全國電腦軟體設計競賽初賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第二十九名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2022-035",
+      "title": "HP CodeWars Taiwan 2022 全國大學程式設計競賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第十二名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "ais3-pre-exam-2026",
+      "title": "AIS3 pre-exam",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2026",
+      "endDate": "2026",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第50名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "ais3-pre-exam-2025",
+      "title": "AIS3 pre-exam",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第99名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2022-033",
+      "title": "AIS3 pre-exam",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "attended-event-2022-006",
+      "title": "HITCON台灣駭客年會",
+      "domains": [
+        "security"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "會眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "線上參與",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "taiwan-good-hacker-2021",
+      "title": "台灣好厲駭",
+      "domains": [
+        "security",
+        "cs"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "導師深度輔導模式入選",
+      "roles": [
+        "student"
+      ],
+      "organization": "台灣好厲駭",
+      "location": "台灣",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "id": "organized-event-2021-016",
+      "title": "第五屆前鎮高中競技程式同好會線上賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "出題者",
+      "roles": [
+        "member"
+      ],
+      "organization": null,
+      "location": "CJOJ",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2021-015",
+      "title": "北科資工系聯誼",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "副召",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "臺北科技大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2021-014",
+      "title": "COSCUP開源人年會",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "導播、製播組組員",
+      "roles": [
+        "director",
+        "staff"
+      ],
+      "organization": null,
+      "location": "gather town",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-performance-2021-001",
+      "title": "北科新生群新生活動",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "線上近距離魔術表演",
+      "roles": [
+        "performer"
+      ],
+      "organization": null,
+      "location": "gather town",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "performance"
+      ]
+    },
+    {
+      "id": "magic-event-2021-003",
+      "title": "第二屆台灣線上魔術大會OMG",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "觀眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "youtube",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "education-2021-001",
+      "title": "國立台北科技大學 資訊工程學系",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2021",
+      "endDate": "2025",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "特殊選才錄取資工系唯一名額",
+      "roles": [
+        "student"
+      ],
+      "organization": "國立台北科技大學",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "education"
+      ]
+    },
+    {
+      "id": "cs-competition-2021-032",
+      "title": "少年圖靈計畫程式挑戰營決賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2021-031",
+      "title": "R2S CTF",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2021-030",
+      "title": "AIS3 pre-exam",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2021-029",
+      "title": "MyFirstCTF",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2021-028",
+      "title": "just CTF2020",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2021-027",
+      "title": "少年圖靈計畫程式挑戰營初賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "晉級決賽",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "attended-event-2021-005",
+      "title": "SITCON學⽣計算機年年會",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2021",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "會眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "gather town、youtube",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2020-013",
+      "title": "SITCON HOC",
+      "domains": [
+        "cs",
+        "education"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "工作人員、助教",
+      "roles": [
+        "assistant",
+        "staff"
+      ],
+      "organization": null,
+      "location": "交通大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2020-012",
+      "title": "新竹高中資訊競賽校隊暑期培訓",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "隊長兼助教",
+      "roles": [
+        "leader",
+        "assistant"
+      ],
+      "organization": null,
+      "location": "新竹高中",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2020-011",
+      "title": "新竹高中軟研社六校聯合寒訓",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "cancelled",
+      "result": "副召；因疫情停辦",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "成功大學",
+      "description": "因疫情停辦",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2020-010",
+      "title": "新竹高中魔術社五校聯合寒訓",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "副召",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "長城溪森林",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2020-009",
+      "title": "新竹高中軟研社十四校聯合寒訓",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "副召",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "交通大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-event-2020-002",
+      "title": "FISM ASIA台灣選考會",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "觀眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "師範大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-event-2020-001",
+      "title": "第一屆台灣線上魔術大會OMG",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "觀眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "youtube",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-competition-2020-001",
+      "title": "第一屆台灣硬幣魔術比賽",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "member"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cubing-event-2020-001",
+      "title": "小丸號第十二屆魔術方塊公開賽",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "工作人員、裁判",
+      "roles": [
+        "judge",
+        "staff",
+        "contestant"
+      ],
+      "organization": null,
+      "location": "台南",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2020-026",
+      "title": "HP CodeWars",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2020-025",
+      "title": "NPSC初賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2020-024",
+      "title": "少年圖靈計畫程式挑戰營決賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2020-023",
+      "title": "TOI推廣計畫線上練習賽五月新手組",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2020-022",
+      "title": "TOI推廣計畫線上練習賽四月進階組",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2020-021",
+      "title": "TOI推廣計畫線上練習賽四月新手組",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2020-020",
+      "title": "少年圖靈計畫程式挑戰營初賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "晉級決賽",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2020-019",
+      "title": "Balsn CTF",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第一百三十九名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2020-018",
+      "title": "高級中學數理及資訊學科能力競賽資訊科北二區複賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第十八名（佳作）",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2020-017",
+      "title": "榮耀資戰–重裝上陣",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第五十七名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2020-016",
+      "title": "ISSC青年程式設計競賽國際組選拔",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第十六名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "attended-event-2020-004",
+      "title": "SITCON學⽣計算機年會",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "會眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": null,
+      "location": "中研院",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2019-008",
+      "title": "新竹高中軟研社三校企業參訪",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "總召",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "精誠資訊",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2019-007",
+      "title": "新竹高中軟研社三校聯合迎新",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "副召",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "交通大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2019-006",
+      "title": "新竹高中陸上運動會",
+      "domains": [
+        "other"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "總務處獎狀組負責人",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "新竹高中",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2019-005",
+      "title": "新竹高中水上運動會",
+      "domains": [
+        "other"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "總務處獎狀組負責人",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "新竹高中",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2019-004",
+      "title": "新竹高中社團博覽會",
+      "domains": [
+        "other"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "總召",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "新竹高中",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2019-003",
+      "title": "新竹高中軟研社老人茶會",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "總召",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "新竹高中",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "milestone-wca-registration",
+      "title": "WCA 選手",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "WCA ID：2019LIUC04",
+      "roles": [
+        "contestant"
+      ],
+      "organization": "世界魔術方塊協會（WCA）",
+      "location": null,
+      "description": "",
+      "links": [
+        {
+          "label": "WCA 選手資料",
+          "url": "https://www.worldcubeassociation.org/persons/2019LIUC04",
+          "type": "proof"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "certification"
+      ]
+    },
+    {
+      "id": "milestone-bugku-rank",
+      "title": "BugkuCTF",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "最高排名第 42 名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [
+        {
+          "label": "BugkuCTF 個人頁",
+          "url": "https://ctf.bugku.com/user/info/id/6384.html",
+          "type": "proof"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cubing-competition-2019-001",
+      "title": "建中盃魔術方塊公開賽",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-015",
+      "title": "TOI推廣計畫新手同好會個人賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第十八名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-014",
+      "title": "TOI推廣計畫新手同好會團體賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第二名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-013",
+      "title": "資訊奧林匹亞選手海選",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "滿分",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-012",
+      "title": "高級中學數理及資訊學科能力競賽資訊科校內初賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第一名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-011",
+      "title": "少年圖靈計畫程式挑戰營初賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "晉級決賽",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-010",
+      "title": "高級中學數理及資訊學科能力競賽資訊科北二區複賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-009",
+      "title": "TOI推廣計畫線上練習賽十二月進階組",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-008",
+      "title": "TOI推廣計畫線上練習賽十二月新手組",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-007",
+      "title": "TOI推廣計畫線上練習賽十一月進階組",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-006",
+      "title": "TOI推廣計畫線上練習賽十一月新手組",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-005",
+      "title": "網際網路程式設計全國大賽初賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-004",
+      "title": "少年圖靈計畫程式挑戰營決賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-003",
+      "title": "資訊奧林匹亞選手初選",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第一百二十九名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "cs-competition-2019-002",
+      "title": "HP CodeWars",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第二十一名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "attended-event-2019-003",
+      "title": "新竹高中日本教育旅行",
+      "domains": [
+        "other"
+      ],
+      "startDate": "2019",
+      "endDate": "2019",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "學員",
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": "日本廣島市",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2018-002",
+      "title": "新竹高中陸上運動會",
+      "domains": [
+        "other"
+      ],
+      "startDate": "2018",
+      "endDate": "2018",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "總務處獎狀組負責人",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "新竹高中",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "organized-event-2018-001",
+      "title": "新竹高中軟研社聯合社課",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2018",
+      "endDate": "2018",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "總召",
+      "roles": [
+        "organizer"
+      ],
+      "organization": null,
+      "location": "交通大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "cs-competition-2018-001",
+      "title": "高級中學數理及資訊學科能力競賽資訊科校內初賽",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2018",
+      "endDate": "2018",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "第十一名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "attended-event-2018-002",
+      "title": "竹區軟資研社聯合迎新",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2018",
+      "endDate": "2018",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "學員",
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": "交通大學",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "attended-event-2018-001",
+      "title": "台灣青年農業創業創新研習班",
+      "domains": [
+        "other"
+      ],
+      "startDate": "2018",
+      "endDate": "2018",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "學員",
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": "中國黑龍江省",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "event"
+      ]
+    },
+    {
+      "id": "magic-consultant",
+      "title": "魔術顧問",
+      "domains": [
+        "magic",
+        "hypnosis"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "current",
+      "result": "多名知名魔術師",
+      "roles": [
+        "consultant"
+      ],
+      "organization": "多名知名魔術師",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "work"
+      ]
+    },
+    {
+      "id": "ipas-security",
+      "title": "iPAS 資訊安全工程師初級",
+      "domains": [
+        "security"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "通過",
+      "roles": [
+        "student"
+      ],
+      "organization": "經濟部產業人才能力檢定",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "certification"
+      ]
+    },
+    {
+      "id": "ipas-machine-learning",
+      "title": "iPAS 機器學習工程師",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "通過",
+      "roles": [
+        "student"
+      ],
+      "organization": "經濟部產業人才能力檢定",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "certification"
+      ]
+    },
+    {
+      "id": "dream-one-teacher",
+      "title": "夢想一號魔術方塊學院",
+      "domains": [
+        "cubing",
+        "education"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "current",
+      "result": null,
+      "roles": [
+        "teacher",
+        "staff"
+      ],
+      "organization": "夢想一號魔術方塊學院",
+      "location": null,
+      "description": "A 級專業講師，多場比賽專業裁判及打亂員，科教館門市店員",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "teaching"
+      ]
+    },
+    {
+      "id": "dream-one-cube-certification",
+      "title": "夢想一號魔術方塊綜合能力認證",
+      "domains": [
+        "cubing"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "A+（900 分），排名第十五",
+      "roles": [
+        "contestant",
+        "student"
+      ],
+      "organization": "夢想一號魔術方塊學院",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "certification"
+      ]
+    },
+    {
+      "id": "coin-home-community",
+      "title": "台灣硬幣討論社團【硬幣宅】",
+      "domains": [
+        "magic"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "current",
+      "result": "負責人",
+      "roles": [
+        "founder",
+        "administrator"
+      ],
+      "organization": "【硬幣宅】",
+      "location": "線上",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": true,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "sunbird-backend-intern",
+      "title": "Sunbird Software",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "Backend Engineer Intern",
+      "roles": [
+        "intern",
+        "engineer"
+      ],
+      "organization": "Sunbird Software",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "work"
+      ]
+    },
+    {
+      "id": "organization-unknown-022",
+      "title": "台北科技大學圍棋社",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "公關（創社幹部）",
+      "roles": [
+        "founder",
+        "staff"
+      ],
+      "organization": "台北科技大學圍棋社",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-021",
+      "title": "簡子製造有限公司",
+      "domains": [
+        "magic"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "實習生",
+      "roles": [
+        "intern"
+      ],
+      "organization": "簡子製造有限公司",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-020",
+      "title": "台北科技大學競技撲克研究社",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "創社社員",
+      "roles": [
+        "founder",
+        "member"
+      ],
+      "organization": "台北科技大學競技撲克研究社",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-019",
+      "title": "2022臺北科技大學新生群",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "管理員",
+      "roles": [
+        "administrator"
+      ],
+      "organization": "2022臺北科技大學新生群",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-018",
+      "title": "2021臺北科技大學新生群",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "創辦人及管理員",
+      "roles": [
+        "founder",
+        "administrator"
+      ],
+      "organization": "2021臺北科技大學新生群",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-017",
+      "title": "數位司馬遷",
+      "domains": [
+        "education"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "寫手",
+      "roles": [
+        "author"
+      ],
+      "organization": "數位司馬遷",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-016",
+      "title": "CSDC Online Judge",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "網站管理員",
+      "roles": [
+        "administrator"
+      ],
+      "organization": "CSDC Online Judge",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-015",
+      "title": "新竹高中畢編會",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "主席",
+      "roles": [
+        "leader"
+      ],
+      "organization": "新竹高中畢編會",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-014",
+      "title": "新竹高中畢編會",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "班級代表",
+      "roles": [
+        "representative"
+      ],
+      "organization": "新竹高中畢編會",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-013",
+      "title": "新竹高中資訊競賽校隊",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "隊長兼助教",
+      "roles": [
+        "leader",
+        "assistant"
+      ],
+      "organization": "新竹高中資訊競賽校隊",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-012",
+      "title": "新竹高中社團審議小組",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "委員（學生代表）",
+      "roles": [
+        "representative",
+        "student"
+      ],
+      "organization": "新竹高中社團審議小組",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-011",
+      "title": "新竹高中火箭社火箭計畫",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "控制組組長",
+      "roles": [
+        "leader"
+      ],
+      "organization": "新竹高中火箭社火箭計畫",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-010",
+      "title": "新竹高中火箭社",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "社員",
+      "roles": [
+        "member"
+      ],
+      "organization": "新竹高中火箭社",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-009",
+      "title": "新竹高中音樂研究社",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "社員",
+      "roles": [
+        "member"
+      ],
+      "organization": "新竹高中音樂研究社",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-008",
+      "title": "新竹高中軟體研究社",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "社長",
+      "roles": [
+        "leader"
+      ],
+      "organization": "新竹高中軟體研究社",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-007",
+      "title": "成功國中日本文化研究社",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "社長",
+      "roles": [
+        "leader"
+      ],
+      "organization": "成功國中日本文化研究社",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-006",
+      "title": "成功國中橋藝社",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "副社長",
+      "roles": [
+        "leader"
+      ],
+      "organization": "成功國中橋藝社",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "organization-unknown-005",
+      "title": "成功國中機器人社",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "副社長",
+      "roles": [
+        "leader"
+      ],
+      "organization": "成功國中機器人社",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "milestone-mehta",
+      "title": "三階魔術方塊 Mehta 解法推廣",
+      "domains": [
+        "cubing",
+        "education"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "推廣全球使用者不到 1% 的困難解法",
+      "roles": [
+        "instructor"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "teaching"
+      ]
+    },
+    {
+      "id": "milestone-code-golf-rank",
+      "title": "Code Golf",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "最高排名第 533 名",
+      "roles": [
+        "contestant"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [
+        {
+          "label": "Code Golf 個人頁",
+          "url": "https://code.golf/golfers/shane-liu-1010",
+          "type": "proof"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "competition"
+      ]
+    },
+    {
+      "id": "education-unknown-002",
+      "title": "國立新竹高級中學",
+      "domains": [
+        "other"
+      ],
+      "startDate": "2018",
+      "endDate": "2021",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "student"
+      ],
+      "organization": "國立新竹高級中學",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "education"
+      ]
+    },
+    {
+      "id": "current-unknown-004",
+      "title": "百戲魔術師社群",
+      "domains": [
+        "magic"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "current",
+      "result": "管理員",
+      "roles": [
+        "administrator"
+      ],
+      "organization": "百戲魔術師社群",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "current-unknown-003",
+      "title": "速速製衣",
+      "domains": [
+        "other"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "current",
+      "result": "業務",
+      "roles": [
+        "sales"
+      ],
+      "organization": "速速製衣",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "work"
+      ]
+    },
+    {
+      "id": "current-unknown-002",
+      "title": "台北市街頭藝人",
+      "domains": [
+        "magic",
+        "performance"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "current",
+      "result": null,
+      "roles": [
+        "performer",
+        "member"
+      ],
+      "organization": "台北市政府文化局",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "certification"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-028",
+      "title": "EMOMO",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 PHP",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "資料庫系統小組專案",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shaneliu-zf/EMOMO",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-027",
+      "title": "Sheep N Sheep",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "物件導向程式設計實習作品",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/CoreXing/Sheep-and-sheep",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-026",
+      "title": "Coin",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 React JS",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "小組專案製作購物網站",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shaneliu-zf/coin-master-shop",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-025",
+      "title": "collatz_by_GA",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "使用基因演算法找出考拉茲猜想的遞迴次數",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shaneliu-zf/collatz_by_GA",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-024",
+      "title": "CodeBook",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "自動將程式碼生成md，方便競賽時需要準備codebook",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shaneliu-zf/CodeBook",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-023",
+      "title": "Perceptron",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "用C++手刻感知機模型",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shane-liu-1010/Perceptron",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-022",
+      "title": "Vocabary Hero",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C#",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "團隊開發的2D橫軸射擊遊戲，負責程式、劇本、音效",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-021",
+      "title": "Omega Project",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "自己設計的程式語言，兼具shell的特性，方便自己日常使用",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-020",
+      "title": "Pocket Cube",
+      "domains": [
+        "cs",
+        "cubing"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "物件導向二階魔術方塊，使用BFS解開",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shane-liu-1010/pocket-cube",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-019",
+      "title": "動態變數",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "實作動態變數之類別",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shane-liu-1010/dynamic-variable",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-018",
+      "title": "分數",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "實作數學分數之類別",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shane-liu-1010/Frac",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-017",
+      "title": "害你在心口難開",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 Java",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "一個近年興起的桌遊，寫成手機版以供遊玩",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://play.google.com/store/apps/details?id=com.studio_alvitr.dont_do",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-016",
+      "title": "ASCII製造者",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "讀取圖片，輸出成ascii art",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shane-liu-1010/ascii_maker",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-015",
+      "title": "Nemo Liu 官網魔術效果",
+      "domains": [
+        "cs",
+        "magic"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 PHP",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "幫世界知名魔術道具製作師 Nemo Liu 的網站設計魔術效果",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-014",
+      "title": "Code Tester",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 Python",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "模擬OJ輸入測資，讓程式初學者可以簡易輸入測資",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shane-liu-1010/code_tester",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-013",
+      "title": "電子書讀取器",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "讀取特殊格式的電子書",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shane-liu-1010/Ebook",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-012",
+      "title": "異端終結者",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "格式化C++程式碼風格",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shane-liu-1010/heresy",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-011",
+      "title": "矩陣",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C++",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "實作數學矩陣之類別",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shane-liu-1010/Matrix",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-010",
+      "title": "硬幣列印器",
+      "domains": [
+        "cs",
+        "magic"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 Java",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "硬幣魔術道具",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://play.google.com/store/apps/details?id=cf.shane_psa.coin_one_two_three",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-009",
+      "title": "隨機情話",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 Java",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "隨機出現一句情話",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://play.google.com/store/apps/details?id=cf.shane_psa.love_words",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-008",
+      "title": "Phone Call",
+      "domains": [
+        "cs",
+        "magic"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 Swift",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "與台灣魔術道具店「雪恩魔術」合作設計的魔術app",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-007",
+      "title": "Bugging",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 Swift",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "惡搞程式，讓手機顯示一堆亂碼",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-006",
+      "title": "魔法風雲會血量計算器",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 Java",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "集換式卡牌遊戲魔法風雲會的記血量程式",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://play.google.com/store/apps/details?id=cf.shane_psa.mtg",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-005",
+      "title": "竹中專用抽選程式",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 C#",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "用於學校進行大規模抽獎",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://github.com/shane-liu-1010/choosing",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-004",
+      "title": "文字放大者",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 Java",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "顯示輸入的文本",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://play.google.com/store/apps/details?id=cf.shane_psa.wordviewer",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-003",
+      "title": "身分證字號產生器",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 Java",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "按照需求產生符合台灣身分證規則的身分證字號",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://play.google.com/store/apps/details?id=cf.shane_psa.taiwan_idcard",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-002",
+      "title": "字數計算",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 Java",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "計算輸入之文本的字數",
+      "links": [
+        {
+          "label": "相關連結",
+          "url": "https://play.google.com/store/apps/details?id=cf.shane_psa.wordcounter",
+          "type": "work"
+        }
+      ],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "cs-project-unknown-001",
+      "title": "馬會貨幣系統",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "使用 PHP",
+      "roles": [
+        "developer"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "升大一的暑假為一個有上千玩家的線上 TRPG 開發了一套完整的銀行系統，包含於 messenger 上的 ATM 機器人，以及櫃員系統網站。",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "project"
+      ]
+    },
+    {
+      "id": "king-talent-seed-2024",
+      "title": "2024 國王才藝種子講師培訓計畫",
+      "domains": [
+        "performance",
+        "education"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "id": "cs-course-unknown-008",
+      "title": "【臺灣好厲駭】資安治理成熟度資安講座",
+      "domains": [
+        "security"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "id": "cs-course-unknown-007",
+      "title": "【臺灣好厲駭】資安解碼學～現代密碼奧妙趣",
+      "domains": [
+        "security"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "id": "cs-course-unknown-005",
+      "title": "教育部資訊安全人才培育計畫-第六屆台灣好厲駭導師高階培訓模式",
+      "domains": [
+        "security",
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "id": "cs-course-taiwan-good-hacker-7th",
+      "title": "教育部資訊安全人才培育計畫-第七屆台灣好厲駭導師高階培訓模式",
+      "domains": [
+        "security",
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "id": "cs-course-unknown-004",
+      "title": "資訊之芽語法班（第一階段滿分第一名結業，兩階段第二名優良結業）",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "id": "cs-course-unknown-003",
+      "title": "旁聽清大「競技程式設計」課程",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "id": "cs-course-unknown-002",
+      "title": "精誠CSC程式種子營「Python程式進階」課程",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "id": "cs-course-unknown-001",
+      "title": "精誠CSC程式種子營「Python程式初階」課程",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "student"
+      ],
+      "organization": null,
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "id": "cert-unknown-004",
+      "title": "電腦軟體應用",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "丙級技術士",
+      "roles": [
+        "student"
+      ],
+      "organization": "勞動部勞動力發展署技能檢定中心",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "certification"
+      ]
+    },
+    {
+      "id": "cert-unknown-003",
+      "title": "AIL 人工智慧素養國際認證",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "通過",
+      "roles": [
+        "student"
+      ],
+      "organization": "(GLAD) Global Learning & Assessment Development",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "certification"
+      ]
+    },
+    {
+      "id": "cert-unknown-002",
+      "title": "APCS",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "觀念四（84/100）／實作四（340/400）",
+      "roles": [
+        "student"
+      ],
+      "organization": "教育部智慧創新跨域人才培育計畫",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "certification"
+      ]
+    },
+    {
+      "id": "cert-unknown-001",
+      "title": "CPE",
+      "domains": [
+        "cs"
+      ],
+      "startDate": null,
+      "endDate": null,
+      "datePrecision": "unknown",
+      "status": "completed",
+      "result": "5 題／7 題，3%",
+      "roles": [
+        "student"
+      ],
+      "organization": "大學程式能力檢定委員會",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "certification"
+      ]
+    },
+    {
+      "id": "ntut-tech-law",
+      "title": "國立台北科技大學 科技法律學程",
+      "domains": [
+        "law"
+      ],
+      "startDate": "2021",
+      "endDate": "2025",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": null,
+      "roles": [
+        "student"
+      ],
+      "organization": "國立台北科技大學",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "education"
+      ]
+    },
+    {
+      "id": "community-tkug",
+      "title": "Taiwan Kotlin User Group",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": null,
+      "datePrecision": "year",
+      "status": "current",
+      "result": "社群成員",
+      "roles": [
+        "member",
+        "speaker",
+        "organizer",
+        "host",
+        "staff"
+      ],
+      "organization": "Taiwan Kotlin User Group",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "community-coscup",
+      "title": "COSCUP",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2021",
+      "endDate": null,
+      "datePrecision": "year",
+      "status": "current",
+      "result": "講者、場務、導播製播、TKUG 擺攤",
+      "roles": [
+        "speaker",
+        "staff",
+        "member"
+      ],
+      "organization": "COSCUP",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "community-sitcon",
+      "title": "SITCON",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2020",
+      "endDate": null,
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "會眾；HOC 工作人員、助教",
+      "roles": [
+        "attendee",
+        "staff",
+        "assistant"
+      ],
+      "organization": "SITCON",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "community-hitcon",
+      "title": "HITCON",
+      "domains": [
+        "security",
+        "cs"
+      ],
+      "startDate": "2022",
+      "endDate": "2022",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "會眾",
+      "roles": [
+        "attendee"
+      ],
+      "organization": "HITCON",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "community-wtm",
+      "title": "Women Techmakers（WTM）",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "場務、會眾、TKUG 擺攤",
+      "roles": [
+        "staff",
+        "attendee"
+      ],
+      "organization": "Women Techmakers",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    },
+    {
+      "id": "community-gdg",
+      "title": "GDG／Android Taipei",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2023",
+      "endDate": null,
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "講者、Workshop 助教",
+      "roles": [
+        "speaker",
+        "assistant"
+      ],
+      "organization": "Android Taipei",
+      "location": null,
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "community"
+      ]
+    }
+  ],
+  "learningTimeline": [
+    {
+      "stage": "小四",
+      "items": [
+        "開始接觸 App Inventor 2，開發幾款小遊戲。"
+      ]
+    },
+    {
+      "stage": "小五",
+      "items": [
+        "買了一本 C++ 的書開始自學，建立物件導向程式設計的基礎理解。"
+      ]
+    },
+    {
+      "stage": "小六",
+      "items": [
+        "嘗試網頁開發，初步接觸 HTML、CSS、JavaScript。",
+        "學習安裝電腦作業系統，開始使用 Linux。"
+      ]
+    },
+    {
+      "stage": "國一",
+      "items": [
+        "接觸 WordPress，開始學習 PHP 後端渲染與網站架設，理解網域、虛擬主機等概念。"
+      ]
+    },
+    {
+      "stage": "國二",
+      "items": [
+        "接觸 Java，開始開發 Android 應用程式並陸續上架 Google Play，累積上萬次下載。"
+      ]
+    },
+    {
+      "stage": "高一",
+      "items": [
+        "加入竹中軟體研究社，正式開始學習資料結構與演算法。",
+        "使用 Swift 開發數款 iOS 應用程式。"
+      ]
+    },
+    {
+      "stage": "高二",
+      "items": [
+        "擔任竹中軟體研究社社長，開始參加各種程式競賽。",
+        "旁聽清大「競技程式設計」課程。",
+        "開始接觸資訊安全，曾在 BugkuCTF 達到第 42 名。"
+      ]
+    },
+    {
+      "stage": "高三",
+      "items": [
+        "入選台灣好厲駭導師深度輔導模式。",
+        "學習多種程式語言，嘗試設計程式語言與直譯器，並開始閱讀編譯原理。",
+        "特殊選才錄取台北科技大學資訊工程學系唯一名額。"
+      ]
+    },
+    {
+      "stage": "大一",
+      "items": [
+        "升大一的暑假為一個有上千玩家的線上 TRPG 開發了一套完整的銀行系統，包含於 messenger 上的 ATM 機器人，以及櫃員系統網站。",
+        "參加 Global Cybersecurity Camp 2022，小組以 C++ 開發可繞過市面防毒軟體的木馬程式。"
+      ]
+    },
+    {
+      "stage": "大二",
+      "items": [
+        "參加第八屆全國科技大專校院程式競賽，獲得金獎第一名。",
+        "加入 Taiwan Kotlin User Group。",
+        "擔任 KotlinConf Global Watch Party 2023 台灣場主持人。",
+        "創立臺北科技大學駭客喵喵社。"
+      ]
+    },
+    {
+      "stage": "大三",
+      "items": [
+        "參加 IThome 鐵人賽並完賽，主題為《那些寫程式的宗教戰爭》。",
+        "參加 ICPC 2023 台灣站，獲得銅獎。",
+        "於 Android Taipei 分享《Clean Code：如何寫好一個程式》。",
+        "參加第九屆全國科技大專校院程式競賽，獲得金獎第三名。"
+      ]
+    },
+    {
+      "stage": "大四",
+      "items": [
+        "參加 ICPC 2024 台灣站，獲得銅獎第一名。",
+        "擔任 Kotlin Meetup 講者，分享《這不是你平常寫的 Kotlin：Code Golf 的黑魔法》。",
+        "擔任 COSCUP 2025 JVM 台灣代表隊閃電講講者。",
+        "考試錄取清華大學資訊安全研究所。"
+      ]
+    },
+    {
+      "stage": "碩一",
+      "items": [
+        "加入清華大學資訊安全實驗室 IS Lab，由孫宏民教授指導。",
+        "擔任 AIS3 Junior 2026 講師。",
+        "擔任 COSCUP 2026 講者，分享《打造你自己的 Kotlin DSL》。",
+        "於 IBM 擔任 Associate Application Consultant Summer Intern。",
+        "申請並錄取逕讀資訊工程學系博士學位。"
+      ]
+    },
+    {
+      "stage": "博一",
+      "items": [
+        "持續進行資訊安全研究、技術實務與社群分享。"
+      ]
+    }
+  ]
+}

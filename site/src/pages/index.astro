@@ -1,0 +1,99 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE } from "../data/site";
+import {
+  ABOUT,
+  SKILLS,
+  DOMAINS,
+  HIGHLIGHTS,
+} from "../data/profile";
+import { EXPERIENCES } from "../lib/experiences";
+import "../styles/home.css";
+---
+
+<Base>
+  <main>
+    <header class="shell hero">
+      <div class="hero__text">
+        <p class="eyebrow">{SITE.tagline}</p>
+        <h1>{SITE.name}</h1>
+        <p class="hero__lead">{ABOUT.lead}</p>
+      </div>
+    </header>
+
+    <section class="shell section" id="about">
+      <header class="section__head">
+        <p class="eyebrow">About</p>
+        <h2>關於我</h2>
+      </header>
+      <div class="section__body">
+        {ABOUT.paragraphs.map((text) => <p class="prose">{text}</p>)}
+      </div>
+    </section>
+
+    <section class="shell section section--stack" id="skills">
+      <header class="section__head">
+        <p class="eyebrow">Skills & Interests</p>
+        <h2>Skills</h2>
+      </header>
+      <div class="section__body">
+        <div class="card-grid skill-grid">
+          {
+            SKILLS.map((skill) => (
+              <article class="card skill-card">
+                <h3>{skill.title}</h3>
+                <ul class="tag-list">
+                  {skill.items.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="shell section" id="experience">
+      <header class="section__head">
+        <p class="eyebrow">Experience</p>
+        <h2>經歷</h2>
+      </header>
+      <div class="section__body">
+        <ul class="highlight-list">
+          {
+            HIGHLIGHTS.map((text) => (
+              <li>
+                <p class="highlight-list__title">{text}</p>
+              </li>
+            ))
+          }
+        </ul>
+        <a class="button button--primary highlight-more" href="/experiences/">
+          完整經歷（{EXPERIENCES.length} 筆）→
+        </a>
+      </div>
+    </section>
+
+    <section class="shell section" id="links">
+      <header class="section__head">
+        <p class="eyebrow">Archive</p>
+        <h2>各領域紀錄</h2>
+      </header>
+      <div class="section__body">
+        <div class="card-grid card-grid--two">
+          {
+            DOMAINS.map((domain) => (
+              <a class="card card--link" href={domain.href} style={`--accent: var(--${domain.accent})`}>
+                <p class="eyebrow">{domain.kicker}</p>
+                <h3>{domain.title}</h3>
+                <p>{domain.note}</p>
+                <span class="card__go">前往 →</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

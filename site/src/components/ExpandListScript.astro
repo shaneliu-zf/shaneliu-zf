@@ -1,0 +1,19 @@
+<script>
+  document.querySelectorAll<HTMLElement>("[data-expand-list]").forEach((list) => {
+    const button = list.querySelector<HTMLButtonElement>("[data-expand-button]");
+    const hiddenItems = [...list.querySelectorAll<HTMLElement>("[data-expand-item]")];
+    if (!button || hiddenItems.length === 0) return;
+
+    const showLabel = button.dataset.showLabel || `展開其餘 ${hiddenItems.length} 筆`;
+    const hideLabel = button.dataset.hideLabel || "收合";
+
+    button.addEventListener("click", () => {
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      hiddenItems.forEach((item) => {
+        item.hidden = expanded;
+      });
+      button.setAttribute("aria-expanded", String(!expanded));
+      button.textContent = expanded ? showLabel : hideLabel;
+    });
+  });
+</script>
