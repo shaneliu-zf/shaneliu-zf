@@ -513,7 +513,7 @@
       "id": "organized-event-2024-029",
       "title": "TDNA 台灣數位遊牧者大會2024",
       "domains": [
-        "other"
+        "cs"
       ],
       "startDate": "2024",
       "endDate": "2024",
@@ -530,6 +530,7 @@
       "images": [],
       "featured": false,
       "types": [
+        "community",
         "event"
       ]
     },
@@ -3553,6 +3554,79 @@
       "featured": true,
       "types": [
         "certification"
+      ]
+    },
+    {
+      "id": "nthu-security-drill-ta-2026",
+      "title": "清大資安攻防演練課程",
+      "domains": [
+        "cs",
+        "security"
+      ],
+      "startDate": "2026",
+      "endDate": null,
+      "datePrecision": "year",
+      "status": "current",
+      "result": "助教",
+      "roles": [
+        "assistant"
+      ],
+      "organization": "國立清華大學",
+      "location": "新竹市",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "teaching"
+      ]
+    },
+    {
+      "id": "xiangshan-hs-cs-club-2025",
+      "title": "新竹市立香山高中資訊社",
+      "domains": [
+        "cs"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "指導老師",
+      "roles": [
+        "teacher"
+      ],
+      "organization": "新竹市立香山高中",
+      "location": "新竹市",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "teaching"
+      ]
+    },
+    {
+      "id": "datong-hs-magic-club-2024",
+      "title": "台北市立大同高中魔術社",
+      "domains": [
+        "magic"
+      ],
+      "startDate": "2024",
+      "endDate": "2024",
+      "datePrecision": "year",
+      "status": "completed",
+      "result": "指導老師",
+      "roles": [
+        "teacher"
+      ],
+      "organization": "台北市立大同高中",
+      "location": "台北市",
+      "description": "",
+      "links": [],
+      "images": [],
+      "featured": false,
+      "types": [
+        "teaching"
       ]
     },
     {

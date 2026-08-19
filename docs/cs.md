@@ -5,7 +5,7 @@
 （2022/3/28 開始計算）
 
 - 擅長程式語言：C++、Kotlin、Python3、Java、PHP、JavaScript、Julia、C#、Swift、Brainfuck、Matlab
-- 領域：程式語言、演算法、資訊安全、CTF、Code golf、手機應用軟體開發（Android、iOS）、網站全端開發及架設維護、電腦科學
+- 領域：程式語言、演算法、資訊安全、CTF、Code golf、手機應用軟體開發（Android、iOS）、全端開發、網站架設與維護、電腦科學
 
 ## 目錄
 

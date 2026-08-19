@@ -36056,9 +36056,17 @@ _**User**_
 
 專案全部都上資工的標
 
-Pocket Cube 沒有魔術
+魔術方塊跟魔術沒關係，為什麼有一些魔術方塊的會勾選魔術
 
 ---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+使用者要求所有專案都加上資工領域標籤。
+
+魔術方塊與魔術無關。部分魔術方塊項目被錯誤標上魔術領域標籤。需要修正。
+</details></think>
 
 _**Agent (default)**_
 
@@ -36109,4 +36117,1383 @@ for e in data['experiences']:
         print(f"{e['id']}: {e['title']} | {e['domains']}")
 PY
 ```
+
+```
+=== projects ===
+cs-project-unknown-028: EMOMO | domains=['cs']
+cs-project-unknown-027: Sheep N Sheep | domains=['cs']
+cs-project-unknown-026: Coin | domains=['cs']
+cs-project-unknown-025: collatz_by_GA | domains=['cs']
+cs-project-unknown-024: CodeBook | domains=['cs']
+cs-project-unknown-023: Perceptron | domains=['cs']
+cs-project-unknown-022: Vocabary Hero | domains=['cs']
+cs-project-unknown-021: Omega Project | domains=['cs']
+cs-project-unknown-020: Pocket Cube | domains=['cubing', 'magic']
+cs-project-unknown-019: 動態變數 | domains=['cs']
+cs-project-unknown-018: 分數 | domains=['cs']
+cs-project-unknown-017: 害你在心口難開 | domains=['cs']
+cs-project-unknown-016: ASCII製造者 | domains=['cs']
+cs-project-unknown-015: Nemo Liu 官網魔術效果 | domains=['cs', 'magic']
+cs-project-unknown-014: Code Tester | domains=['cs']
+cs-project-unknown-013: 電子書讀取器 | domains=['cs']
+cs-project-unknown-012: 異端終結者 | domains=['cs']
+cs-project-unknown-011: 矩陣 | domains=['cs']
+cs-project-unknown-010: 硬幣列印器 | domains=['magic']
+cs-project-unknown-009: 隨機情話 | domains=['cs']
+cs-project-unknown-008: Phone Call | domains=['cs', 'magic']
+cs-project-unknown-007: Bugging | domains=['cs']
+cs-project-unknown-006: 魔法風雲會血量計算器 | domains=['cs']
+cs-project-unknown-005: 竹中專用抽選程式 | domains=['cs']
+cs-project-unknown-004: 文字放大者 | domains=['cs']
+cs-project-unknown-003: 身分證字號產生器 | domains=['cs']
+cs-project-unknown-002: 字數計算 | domains=['cs']
+cs-project-unknown-001: 馬會貨幣系統 | domains=['cs']
+
+=== cubing + magic ===
+cs-talk-2023-003: 魔術方塊教學 | domains=['cubing', 'magic']
+dream-one-teacher: 夢想一號魔術方塊學院 | domains=['cubing', 'education', 'magic']
+dream-one-cube-certification: 夢想一號魔術方塊綜合能力認證 | domains=['cubing', 'magic']
+cs-project-unknown-020: Pocket Cube | domains=['cubing', 'magic']
+
+=== title/desc suggests cubing but has magic without cubing? ===
+
+```
 </details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+發現 Pocket Cube 與硬幣列印器缺少 `cs` 欄位。這兩個專案目前只有 cubing+magic 或 magic，未正確標註 cs 域名。
+
+將為所有專案統一加上 `cs` 欄位。Pocket Cube 會同時標註 `cs` 與 `cubing`；硬幣列印器則保留 `magic`。cs-talk-2023-003、dream-one-teacher、dream-one-cube-certification 等重疊專案需移除 `magic`。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: python3 &lt;&lt;&#39;PY&#39;
+import json
+from pathlib import Path
+path = Path(&#39;/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json&#39;)
+data = json.loads(path.read_text())
+
+changed = []
+for e in data[&#39;experiences&#39;]:
+    before = list(e[&#39;domains&#39;])
+    # remove magic from cubing items
+    if &#39;cubing&#39; in e[&#39;domains&#39;] and &#39;magic&#39; in e[&#39;domains&#39;]:
+        e[&#39;domains&#39;] = [d for d in e[&#39;domains&#39;] if d != &#39;magic&#39;]
+    # all projects get cs
+    if &#39;project&#39; in e.get(&#39;types&#39;, []) and &#39;cs&#39; not in e[&#39;domains&#39;]:
+        e[&#39;domains&#39;] = [&#39;cs&#39;] + e[&#39;domains&#39;]
+    if e[&#39;domains&#39;] != before:
+        changed.append((e[&#39;id&#39;], e[&#39;title&#39;], before, e[&#39;domains&#39;]))
+
+path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + &#34;\n&#34;)
+for row in changed:
+    print(f&#34;{row[0]}: {row[1]}\n  {row[2]} -&gt; {row[3]}&#34;)
+print(f&#34;\n{len(changed)} updated&#34;)
+# verify
+print(&#39;\nprojects missing cs:&#39;, [e[&#39;title&#39;] for e in data[&#39;experiences&#39;] if &#39;project&#39; in e[&#39;types&#39;] and &#39;cs&#39; not in e[&#39;domains&#39;]])
+print(&#39;cubing+magic:&#39;, [e[&#39;title&#39;] for e in data[&#39;experiences&#39;] if &#39;cubing&#39; in e[&#39;domains&#39;] and &#39;magic&#39; in e[&#39;domains&#39;]])
+PY</summary>
+```bash
+python3 <<'PY'
+import json
+from pathlib import Path
+path = Path('/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json')
+data = json.loads(path.read_text())
+
+changed = []
+for e in data['experiences']:
+    before = list(e['domains'])
+    # remove magic from cubing items
+    if 'cubing' in e['domains'] and 'magic' in e['domains']:
+        e['domains'] = [d for d in e['domains'] if d != 'magic']
+    # all projects get cs
+    if 'project' in e.get('types', []) and 'cs' not in e['domains']:
+        e['domains'] = ['cs'] + e['domains']
+    if e['domains'] != before:
+        changed.append((e['id'], e['title'], before, e['domains']))
+
+path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+for row in changed:
+    print(f"{row[0]}: {row[1]}\n  {row[2]} -> {row[3]}")
+print(f"\n{len(changed)} updated")
+# verify
+print('\nprojects missing cs:', [e['title'] for e in data['experiences'] if 'project' in e['types'] and 'cs' not in e['domains']])
+print('cubing+magic:', [e['title'] for e in data['experiences'] if 'cubing' in e['domains'] and 'magic' in e['domains']])
+PY
+```
+
+```
+cs-talk-2023-003: 魔術方塊教學
+  ['cubing', 'magic'] -> ['cubing']
+dream-one-teacher: 夢想一號魔術方塊學院
+  ['cubing', 'education', 'magic'] -> ['cubing', 'education']
+dream-one-cube-certification: 夢想一號魔術方塊綜合能力認證
+  ['cubing', 'magic'] -> ['cubing']
+cs-project-unknown-020: Pocket Cube
+  ['cubing', 'magic'] -> ['cs', 'cubing']
+cs-project-unknown-010: 硬幣列印器
+  ['magic'] -> ['cs', 'magic']
+
+5 updated
+
+projects missing cs: []
+cubing+magic: []
+
+```
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+已處理完畢。將以繁體中文簡短說明。
+</details></think>
+
+_**Agent (default)**_
+
+已處理：
+
+1. **專案**：全部加上資工（含原先只有魔術／魔方的「Pocket Cube」「硬幣列印器」）
+2. **魔術方塊 ≠ 魔術**：拿掉誤掛的魔術標籤——夢想一號老師／認證、魔術方塊教學、Pocket Cube
+
+---
+
+_**User**_
+
+幫我再加上兩個經歷
+
+2025 新竹市立香山高中資訊社指導老師
+2024 台北市立大同高中魔術社指導老師
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+使用者要求新增兩筆工作經歷：2025 年新竹市立香山高中資訊社指導老師，以及 2024 年台北市立大同高中魔術社指導老師。
+
+正在查看 experiences.json 中的既有條目，以確認格式與規範。
+</details></think>
+
+_**Agent (default)**_
+
+先對齊現有「指導老師／教學」經歷的寫法，再補這兩筆。
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: python3 &lt;&lt;&#39;PY&#39;
+import json
+from pathlib import Path
+data=json.loads(Path(&#39;/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json&#39;).read_text())
+# similar teaching / advisor / club teacher entries
+keys=[&#39;指導&#39;,&#39;老師&#39;,&#39;社團&#39;,&#39;高中&#39;]
+for e in data[&#39;experiences&#39;]:
+    t=e[&#39;title&#39;]+(e.get(&#39;result&#39;) or &#39;&#39;)+(e.get(&#39;description&#39;) or &#39;&#39;)+(e.get(&#39;organization&#39;) or &#39;&#39;)
+    if any(k in t for k in keys) and (&#39;teacher&#39; in e.get(&#39;roles&#39;,[]) or &#39;instructor&#39; in e.get(&#39;roles&#39;,[]) or &#39;teaching&#39; in e.get(&#39;types&#39;,[]) or &#39;community&#39; in e.get(&#39;types&#39;,[])):
+        print(json.dumps({
+            &#39;id&#39;:e[&#39;id&#39;],&#39;title&#39;:e[&#39;title&#39;],&#39;domains&#39;:e[&#39;domains&#39;],&#39;types&#39;:e[&#39;types&#39;],
+            &#39;startDate&#39;:e[&#39;startDate&#39;],&#39;endDate&#39;:e[&#39;endDate&#39;],&#39;status&#39;:e[&#39;status&#39;],
+            &#39;result&#39;:e[&#39;result&#39;],&#39;roles&#39;:e[&#39;roles&#39;],&#39;organization&#39;:e[&#39;organization&#39;],
+            &#39;description&#39;:e[&#39;description&#39;],&#39;featured&#39;:e[&#39;featured&#39;],&#39;datePrecision&#39;:e[&#39;datePrecision&#39;]
+        }, ensure_ascii=False))
+print(&#39;--- taxonomies domains/types sample ok ---&#39;)
+print(list(data[&#39;taxonomies&#39;][&#39;domains&#39;].keys()))
+print(&#39;roles has teacher&#39;, &#39;teacher&#39; in data[&#39;taxonomies&#39;][&#39;roles&#39;])
+PY</summary>
+```bash
+python3 <<'PY'
+import json
+from pathlib import Path
+data=json.loads(Path('/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json').read_text())
+# similar teaching / advisor / club teacher entries
+keys=['指導','老師','社團','高中']
+for e in data['experiences']:
+    t=e['title']+(e.get('result') or '')+(e.get('description') or '')+(e.get('organization') or '')
+    if any(k in t for k in keys) and ('teacher' in e.get('roles',[]) or 'instructor' in e.get('roles',[]) or 'teaching' in e.get('types',[]) or 'community' in e.get('types',[])):
+        print(json.dumps({
+            'id':e['id'],'title':e['title'],'domains':e['domains'],'types':e['types'],
+            'startDate':e['startDate'],'endDate':e['endDate'],'status':e['status'],
+            'result':e['result'],'roles':e['roles'],'organization':e['organization'],
+            'description':e['description'],'featured':e['featured'],'datePrecision':e['datePrecision']
+        }, ensure_ascii=False))
+print('--- taxonomies domains/types sample ok ---')
+print(list(data['taxonomies']['domains'].keys()))
+print('roles has teacher', 'teacher' in data['taxonomies']['roles'])
+PY
+```
+
+```
+{"id": "coin-home-community", "title": "台灣硬幣討論社團【硬幣宅】", "domains": ["magic"], "types": ["community"], "startDate": null, "endDate": null, "status": "current", "result": "負責人", "roles": ["founder", "administrator"], "organization": "【硬幣宅】", "description": "", "featured": true, "datePrecision": "unknown"}
+{"id": "organization-unknown-015", "title": "新竹高中畢編會", "domains": ["other"], "types": ["community"], "startDate": null, "endDate": null, "status": "completed", "result": "主席", "roles": ["leader"], "organization": "新竹高中畢編會", "description": "", "featured": false, "datePrecision": "unknown"}
+{"id": "organization-unknown-014", "title": "新竹高中畢編會", "domains": ["other"], "types": ["community"], "startDate": null, "endDate": null, "status": "completed", "result": "班級代表", "roles": ["representative"], "organization": "新竹高中畢編會", "description": "", "featured": false, "datePrecision": "unknown"}
+{"id": "organization-unknown-013", "title": "新竹高中資訊競賽校隊", "domains": ["cs"], "types": ["community"], "startDate": null, "endDate": null, "status": "completed", "result": "隊長兼助教", "roles": ["leader", "assistant"], "organization": "新竹高中資訊競賽校隊", "description": "", "featured": false, "datePrecision": "unknown"}
+{"id": "organization-unknown-012", "title": "新竹高中社團審議小組", "domains": ["other"], "types": ["community"], "startDate": null, "endDate": null, "status": "completed", "result": "委員（學生代表）", "roles": ["representative", "student"], "organization": "新竹高中社團審議小組", "description": "", "featured": false, "datePrecision": "unknown"}
+{"id": "organization-unknown-011", "title": "新竹高中火箭社火箭計畫", "domains": ["cs"], "types": ["community"], "startDate": null, "endDate": null, "status": "completed", "result": "控制組組長", "roles": ["leader"], "organization": "新竹高中火箭社火箭計畫", "description": "", "featured": false, "datePrecision": "unknown"}
+{"id": "organization-unknown-010", "title": "新竹高中火箭社", "domains": ["other"], "types": ["community"], "startDate": null, "endDate": null, "status": "completed", "result": "社員", "
+… (output truncated)
+```
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+參考現有教學紀錄的格式，以統一風格新增兩筆新經歷。
+
+同時參考 king-talent 與 ais3 的教學風格。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: python3 &lt;&lt;&#39;PY&#39;
+import json
+from pathlib import Path
+data=json.loads(Path(&#39;/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json&#39;).read_text())
+for e in data[&#39;experiences&#39;]:
+    if &#39;teaching&#39; in e.get(&#39;types&#39;,[]) or e[&#39;id&#39;] in (&#39;dream-one-teacher&#39;,&#39;king-talent-seed-2024&#39;,&#39;ais3-junior-2026&#39;):
+        print(json.dumps({k:e[k] for k in [&#39;id&#39;,&#39;title&#39;,&#39;domains&#39;,&#39;types&#39;,&#39;startDate&#39;,&#39;endDate&#39;,&#39;status&#39;,&#39;result&#39;,&#39;roles&#39;,&#39;organization&#39;,&#39;description&#39;,&#39;featured&#39;,&#39;datePrecision&#39;]}, ensure_ascii=False))
+# check if ids exist
+ids={e[&#39;id&#39;] for e in data[&#39;experiences&#39;]}
+for i in [&#39;xiangshan-hs-cs-club-2025&#39;,&#39;datong-hs-magic-club-2024&#39;,&#39;hsinchu-xiangshan-info-club-2025&#39;,&#39;taipei-datong-magic-club-2024&#39;]:
+    print(&#39;exists&#39;, i, i in ids)
+PY</summary>
+```bash
+python3 <<'PY'
+import json
+from pathlib import Path
+data=json.loads(Path('/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json').read_text())
+for e in data['experiences']:
+    if 'teaching' in e.get('types',[]) or e['id'] in ('dream-one-teacher','king-talent-seed-2024','ais3-junior-2026'):
+        print(json.dumps({k:e[k] for k in ['id','title','domains','types','startDate','endDate','status','result','roles','organization','description','featured','datePrecision']}, ensure_ascii=False))
+# check if ids exist
+ids={e['id'] for e in data['experiences']}
+for i in ['xiangshan-hs-cs-club-2025','datong-hs-magic-club-2024','hsinchu-xiangshan-info-club-2025','taipei-datong-magic-club-2024']:
+    print('exists', i, i in ids)
+PY
+```
+
+```
+{"id": "ais3-junior-2026", "title": "CTF 入門導論", "domains": ["cs", "security", "education"], "types": ["talk"], "startDate": "2026", "endDate": "2026", "status": "completed", "result": "AIS3 Junior 2026 講師", "roles": ["speaker", "instructor"], "organization": "AIS3 Junior", "description": "", "featured": true, "datePrecision": "year"}
+{"id": "dream-one-teacher", "title": "夢想一號魔術方塊學院", "domains": ["cubing", "education"], "types": ["teaching"], "startDate": null, "endDate": null, "status": "current", "result": null, "roles": ["teacher", "staff"], "organization": "夢想一號魔術方塊學院", "description": "A 級專業講師，多場比賽專業裁判及打亂員，科教館門市店員", "featured": true, "datePrecision": "unknown"}
+{"id": "milestone-mehta", "title": "三階魔術方塊 Mehta 解法推廣", "domains": ["cubing", "education"], "types": ["teaching"], "startDate": null, "endDate": null, "status": "completed", "result": "推廣全球使用者不到 1% 的困難解法", "roles": ["instructor"], "organization": null, "description": "", "featured": false, "datePrecision": "unknown"}
+{"id": "king-talent-seed-2024", "title": "2024 國王才藝種子講師培訓計畫", "domains": ["performance", "education"], "types": ["course"], "startDate": "2024", "endDate": "2024", "status": "completed", "result": null, "roles": ["student"], "organization": null, "description": "", "featured": false, "datePrecision": "year"}
+exists xiangshan-hs-cs-club-2025 False
+exists datong-hs-magic-club-2024 False
+exists hsinchu-xiangshan-info-club-2025 False
+exists taipei-datong-magic-club-2024 False
+
+```
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+將依現有模式新增兩筆教學經歷。
+
+將「新竹市立香山高中資訊社」設為機構名稱，「指導老師」設為職稱。日期欄位以 2025 年為起始年。
+
+兩筆均標記為完成。資訊社對應 cs，魔術社對應 magic。類型選用 teaching。
+
+不將這兩筆加入教育白名單，僅保留 cs 與 magic 欄位。因兩者皆已完成，不會被誤判為現任機構。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: python3 &lt;&lt;&#39;PY&#39;
+import json
+from pathlib import Path
+
+path = Path(&#39;/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json&#39;)
+data = json.loads(path.read_text())
+
+new_items = [
+    {
+        &#34;id&#34;: &#34;xiangshan-hs-cs-club-2025&#34;,
+        &#34;title&#34;: &#34;新竹市立香山高中資訊社&#34;,
+        &#34;domains&#34;: [&#34;cs&#34;],
+        &#34;startDate&#34;: &#34;2025&#34;,
+        &#34;endDate&#34;: &#34;2025&#34;,
+        &#34;datePrecision&#34;: &#34;year&#34;,
+        &#34;status&#34;: &#34;completed&#34;,
+        &#34;result&#34;: &#34;指導老師&#34;,
+        &#34;roles&#34;: [&#34;teacher&#34;],
+        &#34;organization&#34;: &#34;新竹市立香山高中&#34;,
+        &#34;location&#34;: &#34;新竹市&#34;,
+        &#34;description&#34;: &#34;&#34;,
+        &#34;links&#34;: [],
+        &#34;images&#34;: [],
+        &#34;featured&#34;: False,
+        &#34;types&#34;: [&#34;teaching&#34;],
+    },
+    {
+        &#34;id&#34;: &#34;datong-hs-magic-club-2024&#34;,
+        &#34;title&#34;: &#34;台北市立大同高中魔術社&#34;,
+        &#34;domains&#34;: [&#34;magic&#34;],
+        &#34;startDate&#34;: &#34;2024&#34;,
+        &#34;endDate&#34;: &#34;2024&#34;,
+        &#34;datePrecision&#34;: &#34;year&#34;,
+        &#34;status&#34;: &#34;completed&#34;,
+        &#34;result&#34;: &#34;指導老師&#34;,
+        &#34;roles&#34;: [&#34;teacher&#34;],
+        &#34;organization&#34;: &#34;台北市立大同高中&#34;,
+        &#34;location&#34;: &#34;台北市&#34;,
+        &#34;description&#34;: &#34;&#34;,
+        &#34;links&#34;: [],
+        &#34;images&#34;: [],
+        &#34;featured&#34;: False,
+        &#34;types&#34;: [&#34;teaching&#34;],
+    },
+]
+
+ids = {e[&#34;id&#34;] for e in data[&#34;experiences&#34;]}
+for item in new_items:
+    if item[&#34;id&#34;] in ids:
+        raise SystemExit(f&#34;duplicate id {item[&#39;id&#39;]}&#34;)
+
+# Insert near other recent teaching/org entries: put after dream-one-teacher if present
+insert_at = next((i for i, e in enumerate(data[&#34;experiences&#34;]) if e[&#34;id&#34;] == &#34;dream-one-teacher&#34;), 0)
+data[&#34;experiences&#34;][insert_at:insert_at] = new_items
+
+path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + &#34;\n&#34;)
+print(&#34;added:&#34;)
+for item in new_items:
+    print(item[&#34;id&#34;], item[&#34;title&#34;], item[&#34;result&#34;], item[&#34;startDate&#34;])
+PY</summary>
+```bash
+python3 <<'PY'
+import json
+from pathlib import Path
+
+path = Path('/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json')
+data = json.loads(path.read_text())
+
+new_items = [
+    {
+        "id": "xiangshan-hs-cs-club-2025",
+        "title": "新竹市立香山高中資訊社",
+        "domains": ["cs"],
+        "startDate": "2025",
+        "endDate": "2025",
+        "datePrecision": "year",
+        "status": "completed",
+        "result": "指導老師",
+        "roles": ["teacher"],
+        "organization": "新竹市立香山高中",
+        "location": "新竹市",
+        "description": "",
+        "links": [],
+        "images": [],
+        "featured": False,
+        "types": ["teaching"],
+    },
+    {
+        "id": "datong-hs-magic-club-2024",
+        "title": "台北市立大同高中魔術社",
+        "domains": ["magic"],
+        "startDate": "2024",
+        "endDate": "2024",
+        "datePrecision": "year",
+        "status": "completed",
+        "result": "指導老師",
+        "roles": ["teacher"],
+        "organization": "台北市立大同高中",
+        "location": "台北市",
+        "description": "",
+        "links": [],
+        "images": [],
+        "featured": False,
+        "types": ["teaching"],
+    },
+]
+
+ids = {e["id"] for e in data["experiences"]}
+for item in new_items:
+    if item["id"] in ids:
+        raise SystemExit(f"duplicate id {item['id']}")
+
+# Insert near other recent teaching/org entries: put after dream-one-teacher if present
+insert_at = next((i for i, e in enumerate(data["experiences"]) if e["id"] == "dream-one-teacher"), 0)
+data["experiences"][insert_at:insert_at] = new_items
+
+path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+print("added:")
+for item in new_items:
+    print(item["id"], item["title"], item["result"], item["startDate"])
+PY
+```
+
+```
+added:
+xiangshan-hs-cs-club-2025 新竹市立香山高中資訊社 指導老師 2025
+datong-hs-magic-club-2024 台北市立大同高中魔術社 指導老師 2024
+
+```
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+正在確認 describeExperience 的顯示格式。club name 對應標題，school 對應機構，「指導老師」對應結果。
+
+確認顯示格式為「新竹市立香山高中・指導老師」。因 teaching 不屬 community 或 work，不會進入 past-orgs 區塊，但會出現在完整歸檔清單與 CS 頁面。
+
+考慮將 teaching 類型歸入 community，讓完成的教學經驗也能進入 past-orgs 分類。目前僅 current teaching 會顯示於 current-orgs，completed teaching 仍會留在完整歸檔清單中。
+
+CS 頁面的 experienceGroups 會將 teaching 歸入 teaching 群組。魔術社域名的歸檔頁面也會顯示大同高中的相關紀錄。兩筆新經歷已加入。
+</details></think>
+
+_**Agent (default)**_
+
+已補上兩筆教學經歷：
+
+| 年份 | 標題 | 領域 | 結果 |
+|------|------|------|------|
+| 2025 | 新竹市立香山高中資訊社 | 資工 | 指導老師 |
+| 2024 | 台北市立大同高中魔術社 | 魔術 | 指導老師 |
+
+類型為 `teaching`，狀態為已完成。若實際是學年度跨年或仍在進行，跟我說我再改時間／狀態。
+
+---
+
+_**User**_
+
+TDNA 台灣數位遊牧者大會2024
+是社群與組織 跟資工
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+將 TDNA 台灣數位遊牧者大會 2024 的類型更新為「社群與組織」與「資工」。
+
+正在尋找目前的條目。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "contextAfter": 25,
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json",
+  "pattern": "TDNA|organized-event-2024-029"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json",
+  "pattern": "TDNA|organized-event-2024-029",
+  "topFiles": [
+    {
+      "matchCount": 27,
+      "uri": "site/src/data/experiences.json"
+    }
+  ],
+  "totalFiles": 1,
+  "totalMatches": 2
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+使用者希望將域名設定為 cs（資工），並取代其他選項。
+
+「是社群與組織」對應類型 community，與 cs 域名並存。正在評估是新增 community 類型，還是將 event 替換為 community。
+
+已確定將域名設為 cs，並以 community 作為類型。正在斟酌是否同時保留 event，因為這場活動也是 TKUG 擺攤。
+
+最終決定類型為 community 與 event 共存，community 置前。但發現若僅標 community，可能因 isOrganizedEvent 的判斷邏輯而無法進入 organized events 區塊，因為該區塊通常依 organized-event ID 前綴或 event 類型與主辦者角色來篩選。
+
+確認 ID 前綴 organized-event 會讓活動進入 organized events 區塊，不受類型影響。因此類型採用 community，與 cs 域名搭配即可。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: /Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+簡短確認完成。活動仍屬展覽類型，ID 為 organized-event。
+
+主類型為 community。
+</details></think>
+
+_**Agent (default)**_
+
+已改：領域為資工，類型為社群與組織（並保留活動，因為是 TKUG 擺攤場次）。
+
+---
+
+_**User**_
+
+現在還有哪些資歷缺少時間
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+正在確認哪些資歷缺少時間或日期。
+
+將查詢 experiences.json，找出 startDate 為空、日期精度未知或日期缺失的項目。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: python3 &lt;&lt;&#39;PY&#39;
+import json
+from pathlib import Path
+data=json.loads(Path(&#39;/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json&#39;).read_text())
+types=data[&#39;taxonomies&#39;][&#39;types&#39;]
+domains=data[&#39;taxonomies&#39;][&#39;domains&#39;]
+
+missing=[]
+for e in data[&#39;experiences&#39;]:
+    start=e.get(&#39;startDate&#39;)
+    end=e.get(&#39;endDate&#39;)
+    prec=e.get(&#39;datePrecision&#39;)
+    # missing time: no startDate, or unknown precision with null start
+    if not start:
+        missing.append(e)
+
+print(f&#34;缺少 startDate：{len(missing)} 筆\n&#34;)
+# group by type
+from collections import defaultdict
+by_type=defaultdict(list)
+for e in missing:
+    for t in e.get(&#39;types&#39;,[&#39;?&#39;]):
+        by_type[t].append(e)
+
+for t in sorted(by_type.keys(), key=lambda x: -len(by_type[x])):
+    items=by_type[t]
+    # dedupe if multi-type - show unique by id in overall list instead
+print(&#39;（下列以一筆一列，不依類型拆開重複）\n&#39;)
+for e in sorted(missing, key=lambda x: (x.get(&#39;types&#39;,[&#39;&#39;])[0], x[&#39;title&#39;])):
+    type_labels=&#39;、&#39;.join(types.get(t,t) for t in e[&#39;types&#39;])
+    domain_labels=&#39;、&#39;.join(domains.get(d,d) for d in e[&#39;domains&#39;])
+    status=e.get(&#39;status&#39;)
+    result=(e.get(&#39;result&#39;) or e.get(&#39;description&#39;) or &#39;&#39;)[:40]
+    print(f&#34;- {e[&#39;title&#39;]}&#34;)
+    print(f&#34;  id={e[&#39;id&#39;]}｜{type_labels}｜{domain_labels}｜{status}&#34; + (f&#34;｜{result}&#34; if result else &#34;&#34;))
+PY</summary>
+```bash
+python3 <<'PY'
+import json
+from pathlib import Path
+data=json.loads(Path('/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json').read_text())
+types=data['taxonomies']['types']
+domains=data['taxonomies']['domains']
+
+missing=[]
+for e in data['experiences']:
+    start=e.get('startDate')
+    end=e.get('endDate')
+    prec=e.get('datePrecision')
+    # missing time: no startDate, or unknown precision with null start
+    if not start:
+        missing.append(e)
+
+print(f"缺少 startDate：{len(missing)} 筆\n")
+# group by type
+from collections import defaultdict
+by_type=defaultdict(list)
+for e in missing:
+    for t in e.get('types',['?']):
+        by_type[t].append(e)
+
+for t in sorted(by_type.keys(), key=lambda x: -len(by_type[x])):
+    items=by_type[t]
+    # dedupe if multi-type - show unique by id in overall list instead
+print('（下列以一筆一列，不依類型拆開重複）\n')
+for e in sorted(missing, key=lambda x: (x.get('types',[''])[0], x['title'])):
+    type_labels='、'.join(types.get(t,t) for t in e['types'])
+    domain_labels='、'.join(domains.get(d,d) for d in e['domains'])
+    status=e.get('status')
+    result=(e.get('result') or e.get('description') or '')[:40]
+    print(f"- {e['title']}")
+    print(f"  id={e['id']}｜{type_labels}｜{domain_labels}｜{status}" + (f"｜{result}" if result else ""))
+PY
+```
+
+```
+缺少 startDate：70 筆
+
+（下列以一筆一列，不依類型拆開重複）
+
+- AIL 人工智慧素養國際認證
+  id=cert-unknown-003｜證照｜資訊工程｜completed｜通過
+- APCS
+  id=cert-unknown-002｜證照｜資訊工程｜completed｜觀念四（84/100）／實作四（340/400）
+- CPE
+  id=cert-unknown-001｜證照｜資訊工程｜completed｜5 題／7 題，3%
+- iPAS 機器學習工程師
+  id=ipas-machine-learning｜證照｜資訊工程｜completed｜通過
+- iPAS 資訊安全工程師初級
+  id=ipas-security｜證照｜資訊安全｜completed｜通過
+- 台北市街頭藝人
+  id=current-unknown-002｜證照｜魔術、表演與雜技｜current
+- 夢想一號魔術方塊綜合能力認證
+  id=dream-one-cube-certification｜證照｜魔術方塊｜completed｜A+（900 分），排名第十五
+- 電腦軟體應用
+  id=cert-unknown-004｜證照｜資訊工程｜completed｜丙級技術士
+- 2021臺北科技大學新生群
+  id=organization-unknown-018｜社群與組織｜其他｜completed｜創辦人及管理員
+- 2022臺北科技大學新生群
+  id=organization-unknown-019｜社群與組織｜其他｜completed｜管理員
+- CSDC Online Judge
+  id=organization-unknown-016｜社群與組織｜資訊工程｜completed｜網站管理員
+- 台北科技大學圍棋社
+  id=organization-unknown-022｜社群與組織｜其他｜completed｜公關（創社幹部）
+- 台北科技大學競技撲克研究社
+  id=organization-unknown-020｜社群與組織｜其他｜completed｜創社社員
+- 台灣硬幣討論社團【硬幣宅】
+  id=coin-home-community｜社群與組織｜魔術｜current｜負責人
+- 成功國中日本文化研究社
+  id=organization-unknown-007｜社群與組織｜其他｜completed｜社長
+- 成功國中橋藝社
+  id=organization-unknown-006｜社群與組織｜其他｜completed｜副社長
+- 成功國中機器人社
+  id=organization-unknown-005｜社群與組織｜資訊工程｜completed｜副社長
+- 數位司馬遷
+  id=organization-unknown-017｜社群與組織｜教育｜completed｜寫手
+- 新竹高中火箭社
+  id=organization-unknown-010｜社群與組織｜其他｜completed｜社員
+- 新竹高中火箭社火箭計畫
+  id=organization-unknown-011｜社群與組織｜資訊工程｜completed｜控制組組長
+- 新竹高中畢編會
+  id=organization-unknown-015｜社群與組織｜其他｜completed｜主席
+- 新竹高中畢編會
+  id=organization-unknown-014｜社群與組織｜其他｜completed｜班級代表
+- 新竹高中社團審議小組
+  id=organization-unknown-012｜社群與組織｜其他｜completed｜委員（學生代表）
+- 新竹高中資訊競賽校隊
+  id=organization-unknown-013｜社群與組織｜資訊工程｜completed｜隊長兼助教
+- 新竹高中軟體研究社
+  id=organization-unknown-008｜社群與組織｜資訊工程｜completed｜社長
+- 新竹高中音樂研究社
+  id=organization-unknown-009｜社群與組織｜其他｜completed｜社員
+- 百戲魔術師社群
+  id=current-unknown-004｜社群與組織｜魔術｜current｜管理員
+- 簡子製造有限公司
+  id=organization-unknown-021｜社群與組織｜魔術｜completed｜實習生
+- Code Golf
+  id=milestone-code-golf-rank｜競賽｜資訊工程｜completed｜最高排名第 533 名
+- 【臺灣好厲駭】資安治理成熟度資安講座
+  id=cs-course-unknown-008｜課程與培訓｜資訊安全｜
+… (output truncated)
+```
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+將以繁體中文整理並依類別彙整目前缺少時間的資歷。
+
+認證在介面可能未顯示日期，但資料中仍會呈現時間缺失。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: python3 &lt;&lt;&#39;PY&#39;
+import json
+from pathlib import Path
+from collections import Counter
+data=json.loads(Path(&#39;/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json&#39;).read_text())
+types=data[&#39;taxonomies&#39;][&#39;types&#39;]
+missing=[e for e in data[&#39;experiences&#39;] if not e.get(&#39;startDate&#39;)]
+# primary type count
+c=Counter(e[&#39;types&#39;][0] for e in missing)
+print(&#39;by primary type:&#39;)
+for t,n in c.most_common():
+    print(f&#39;  {types.get(t,t)}: {n}&#39;)
+print(&#39;total&#39;, len(missing), &#39;/&#39;, len(data[&#39;experiences&#39;]))
+PY</summary>
+```bash
+python3 <<'PY'
+import json
+from pathlib import Path
+from collections import Counter
+data=json.loads(Path('/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json').read_text())
+types=data['taxonomies']['types']
+missing=[e for e in data['experiences'] if not e.get('startDate')]
+# primary type count
+c=Counter(e['types'][0] for e in missing)
+print('by primary type:')
+for t,n in c.most_common():
+    print(f'  {types.get(t,t)}: {n}')
+print('total', len(missing), '/', len(data['experiences']))
+PY
+```
+
+```
+by primary type:
+  專案: 28
+  社群與組織: 20
+  證照: 8
+  課程與培訓: 8
+  工作: 3
+  教學: 2
+  競賽: 1
+total 70 / 220
+
+```
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+將以繁體中文整理並列出缺少時間的資歷項目。
+</details></think>
+
+_**Agent (default)**_
+
+目前 **220** 筆裡有 **70** 筆沒有 `startDate`，大致如下：
+
+### 專案（28）
+全部專案都缺時間：EMOMO、Sheep N Sheep、Coin、CodeBook、Pocket Cube、馬會貨幣系統、Nemo Liu 官網魔術效果…等。
+
+### 社群與組織（20）
+- 進行中：台灣硬幣討論社團【硬幣宅】、百戲魔術師社群  
+- 北科：新生群 2021／2022、圍棋社、競技撲克研究社、簡子製造  
+- 竹中：軟研社、資競校隊、火箭社／火箭計畫、畢編會×2、社團審議、音樂研究社  
+- 成功國中：機器人社、橋藝社、日本文化研究社  
+- 其他：CSDC Online Judge、數位司馬遷  
+
+### 證照（8）
+AIL、APCS、CPE、iPAS×2、電腦軟體應用丙級、夢想一號綜合能力認證、台北市街頭藝人  
+
+### 課程與培訓（8）
+好厲駭第六／七屆高階培訓、兩場好厲駭講座、資訊之芽、精誠 CSC Python 初／進階、旁聽清大競技程式  
+
+### 工作（3）
+Sunbird Software、速速製衣、魔術顧問  
+
+### 教學（2）
+夢想一號魔術方塊學院、三階 Mehta 解法推廣  
+
+### 競賽（1）
+Code Golf（最高排名第 533 名）
+
+---
+
+若要補，建議先從「進行中」的幾筆（硬幣宅、百戲、夢想一號、街頭藝人、速速製衣、魔術顧問）和你還記得年份的社群／工作開始。你要我開一份可填的清單，或直接依 docs 幫你猜年份嗎？
+
+---
+
+_**User**_
+
+2026 清大資安攻防演練課程 助教
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+使用者希望新增「2026 清大資安攻防演練課程 助教」的相關經驗。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: python3 &lt;&lt;&#39;PY&#39;
+import json
+from pathlib import Path
+data=json.loads(Path(&#39;/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json&#39;).read_text())
+# similar TA / course / nthu
+for e in data[&#39;experiences&#39;]:
+    t=e[&#39;title&#39;]+(e.get(&#39;result&#39;) or &#39;&#39;)+(e.get(&#39;organization&#39;) or &#39;&#39;)
+    if any(k in t for k in [&#39;助教&#39;,&#39;清大&#39;,&#39;攻防&#39;,&#39;課程&#39;]) or &#39;assistant&#39; in e.get(&#39;roles&#39;,[]):
+        if &#39;cs&#39; in e[&#39;domains&#39;] or &#39;security&#39; in e[&#39;domains&#39;] or &#39;助教&#39; in t:
+            print(json.dumps({k:e.get(k) for k in [&#39;id&#39;,&#39;title&#39;,&#39;domains&#39;,&#39;types&#39;,&#39;startDate&#39;,&#39;endDate&#39;,&#39;status&#39;,&#39;result&#39;,&#39;roles&#39;,&#39;organization&#39;,&#39;description&#39;]}, ensure_ascii=False))
+print(&#39;id exists&#39;, any(e[&#39;id&#39;]==&#39;nthu-security-drill-ta-2026&#39; for e in data[&#39;experiences&#39;]))
+PY</summary>
+```bash
+python3 <<'PY'
+import json
+from pathlib import Path
+data=json.loads(Path('/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json').read_text())
+# similar TA / course / nthu
+for e in data['experiences']:
+    t=e['title']+(e.get('result') or '')+(e.get('organization') or '')
+    if any(k in t for k in ['助教','清大','攻防','課程']) or 'assistant' in e.get('roles',[]):
+        if 'cs' in e['domains'] or 'security' in e['domains'] or '助教' in t:
+            print(json.dumps({k:e.get(k) for k in ['id','title','domains','types','startDate','endDate','status','result','roles','organization','description']}, ensure_ascii=False))
+print('id exists', any(e['id']=='nthu-security-drill-ta-2026' for e in data['experiences']))
+PY
+```
+
+```
+{"id": "organized-event-2023-021", "title": "Android Taipei Jetpack Compose workshop", "domains": ["cs"], "types": ["event"], "startDate": "2023", "endDate": "2023", "status": "completed", "result": "助教", "roles": ["assistant"], "organization": null, "description": ""}
+{"id": "organized-event-2020-013", "title": "SITCON HOC", "domains": ["cs", "education"], "types": ["event"], "startDate": "2020", "endDate": "2020", "status": "completed", "result": "工作人員、助教", "roles": ["assistant", "staff"], "organization": null, "description": ""}
+{"id": "organized-event-2020-012", "title": "新竹高中資訊競賽校隊暑期培訓", "domains": ["cs"], "types": ["event"], "startDate": "2020", "endDate": "2020", "status": "completed", "result": "隊長兼助教", "roles": ["leader", "assistant"], "organization": null, "description": ""}
+{"id": "organization-unknown-013", "title": "新竹高中資訊競賽校隊", "domains": ["cs"], "types": ["community"], "startDate": null, "endDate": null, "status": "completed", "result": "隊長兼助教", "roles": ["leader", "assistant"], "organization": "新竹高中資訊競賽校隊", "description": ""}
+{"id": "cs-course-unknown-003", "title": "旁聽清大「競技程式設計」課程", "domains": ["cs"], "types": ["course"], "startDate": null, "endDate": null, "status": "completed", "result": null, "roles": ["student"], "organization": null, "description": ""}
+{"id": "cs-course-unknown-002", "title": "精誠CSC程式種子營「Python程式進階」課程", "domains": ["cs"], "types": ["course"], "startDate": null, "endDate": null, "status": "completed", "result": null, "roles": ["student"], "organization": null, "description": ""}
+{"id": "cs-course-unknown-001", "title": "精誠CSC程式種子營「Python程式初階」課程", "domains": ["cs"], "types": ["course"], "startDate": null, "endDate": null, "status": "completed", "result": null, "roles": ["student"], "organization": null, "description": ""}
+{"id": "community-sitcon", "title": "SITCON", "domains": ["cs"], "types": ["community"], "startDate": "2020", "endDate": null, "status": "completed", "result": "會眾；HOC 工作人員、助教", "roles": ["attendee", "staff", "a
+… (output truncated)
+```
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+正在確認 2026 年清大資安攻防演練助教的相關時程。目前日期為 8 月 17 日，尚無法判斷該項目的當前狀態。
+
+推測 2026 年攻防演練助教仍在進行中，將標註為 current 狀態。已整理出對應的標題、結果、機構與領域等欄位資料。
+
+欄位類型將採用 teaching 與 assistant。預計插入於清大 PHD 或近期教學項目附近。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: python3 &lt;&lt;&#39;PY&#39;
+import json
+from pathlib import Path
+
+path = Path(&#39;/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json&#39;)
+data = json.loads(path.read_text())
+
+item = {
+    &#34;id&#34;: &#34;nthu-security-drill-ta-2026&#34;,
+    &#34;title&#34;: &#34;清大資安攻防演練課程&#34;,
+    &#34;domains&#34;: [&#34;cs&#34;, &#34;security&#34;],
+    &#34;startDate&#34;: &#34;2026&#34;,
+    &#34;endDate&#34;: None,
+    &#34;datePrecision&#34;: &#34;year&#34;,
+    &#34;status&#34;: &#34;current&#34;,
+    &#34;result&#34;: &#34;助教&#34;,
+    &#34;roles&#34;: [&#34;assistant&#34;],
+    &#34;organization&#34;: &#34;國立清華大學&#34;,
+    &#34;location&#34;: &#34;新竹市&#34;,
+    &#34;description&#34;: &#34;&#34;,
+    &#34;links&#34;: [],
+    &#34;images&#34;: [],
+    &#34;featured&#34;: False,
+    &#34;types&#34;: [&#34;teaching&#34;],
+}
+
+if any(e[&#34;id&#34;] == item[&#34;id&#34;] for e in data[&#34;experiences&#34;]):
+    raise SystemExit(&#34;duplicate&#34;)
+
+# insert near other 2026 / teaching entries
+insert_at = next(
+    (i for i, e in enumerate(data[&#34;experiences&#34;]) if e[&#34;id&#34;] == &#34;xiangshan-hs-cs-club-2025&#34;),
+    0,
+)
+data[&#34;experiences&#34;].insert(insert_at, item)
+path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + &#34;\n&#34;)
+print(&#34;added&#34;, item[&#34;id&#34;], item[&#34;title&#34;], item[&#34;result&#34;], item[&#34;status&#34;])
+PY</summary>
+```bash
+python3 <<'PY'
+import json
+from pathlib import Path
+
+path = Path('/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/experiences.json')
+data = json.loads(path.read_text())
+
+item = {
+    "id": "nthu-security-drill-ta-2026",
+    "title": "清大資安攻防演練課程",
+    "domains": ["cs", "security"],
+    "startDate": "2026",
+    "endDate": None,
+    "datePrecision": "year",
+    "status": "current",
+    "result": "助教",
+    "roles": ["assistant"],
+    "organization": "國立清華大學",
+    "location": "新竹市",
+    "description": "",
+    "links": [],
+    "images": [],
+    "featured": False,
+    "types": ["teaching"],
+}
+
+if any(e["id"] == item["id"] for e in data["experiences"]):
+    raise SystemExit("duplicate")
+
+# insert near other 2026 / teaching entries
+insert_at = next(
+    (i for i, e in enumerate(data["experiences"]) if e["id"] == "xiangshan-hs-cs-club-2025"),
+    0,
+)
+data["experiences"].insert(insert_at, item)
+path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+print("added", item["id"], item["title"], item["result"], item["status"])
+PY
+```
+
+```
+added nthu-security-drill-ta-2026 清大資安攻防演練課程 助教 current
+
+```
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+將以繁體中文簡短確認。
+
+狀態標記為當前，因屬 2026 年。
+</details></think>
+
+_**Agent (default)**_
+
+已加上：**清大資安攻防演練課程**（2026、助教），領域資工＋資安，狀態進行中。若課程已結束或只要標到某學期，跟我說再改。
+
+---
+
+_**User**_
+
+skills 手極加上蝴蝶刀
+
+魔術幫我展開來好了
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+使用者想在 skills 中加入蝴蝶刀，並要求魔術展開。
+
+正在查看 profile.ts 的 SKILLS 結構，準備將蝴蝶刀歸入手極，並擴充魔術技能的詳細內容。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/profile.ts</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "glob": "*.{ts,md,astro}",
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf",
+  "pattern": "魔術|手部|蝴蝶|skills|Skills"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf",
+  "pattern": "魔術|手部|蝴蝶|skills|Skills",
+  "topFiles": [
+    {
+      "matchCount": 555,
+      "uri": "./.specstory/history/2026-08-16_05-40-49Z-resume-organization-feedback.md"
+    },
+    {
+      "matchCount": 1,
+      "uri": "./site/src/pages/dexterity/index.astro"
+    },
+    {
+      "matchCount": 7,
+      "uri": "./site/src/components/DomainArchive.astro"
+    },
+    {
+      "matchCount": 9,
+      "uri": "./site/src/data/domain-pages.ts"
+    },
+    {
+      "matchCount": 1,
+      "uri": "./site/src/pages/experiences/index.astro"
+    },
+    {
+      "matchCount": 2,
+      "uri": "./site/src/lib/archive.ts"
+    },
+    {
+      "matchCount": 1,
+      "uri": "./site/src/lib/experiences.ts"
+    },
+    {
+      "matchCount": 2,
+      "uri": "./site/README.md"
+    },
+    {
+      "matchCount": 6,
+      "uri": "./site/src/content/blog/why-learn-everything.md"
+    },
+    {
+      "matchCount": 5,
+      "uri": "./site/src/content/blog/cubing-teaching.md"
+    },
+    {
+      "matchCount": 9,
+      "uri": "./site/src/content/blog/magic-timeline.md"
+    },
+    {
+      "matchCount": 2,
+      "uri": "./site/src/content.config.ts"
+    },
+    {
+      "matchCount": 12,
+      "uri": "./site/src/data/profile.ts"
+    },
+    {
+      "matchCount": 2,
+      "uri": "./site/src/data/site.ts"
+    },
+    {
+      "matchCount": 3,
+      "uri": "./site/src/pages/index.astro"
+    },
+    {
+      "matchCount": 22,
+      "uri": "./readme.md"
+    },
+    {
+      "matchCount": 9,
+      "uri": "./docs/timeline.md"
+    },
+    {
+      "matchCount": 3,
+      "uri": "./docs/footprints.md"
+    },
+    {
+      "matchCount": 20,
+      "uri": "./docs/orgs-and-events.md"
+    },
+    {
+      "matchCount": 6,
+      "uri": "./docs/performance.md"
+    }
+  ],
+  "totalFiles": 23,
+  "totalMatches": 758
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+正在查看目前的技能設定。
+
+蝴蝶刀將加入手部極限運動。正在評估是否從雜技移除以避免重複。
+
+「魔術」將拆成獨立項目，例如硬幣、撲克牌、心靈、千術、派對、廳堂等。蝴蝶刀會從雜技移除，只留在手部極限運動。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf/docs",
+  "pattern": "魔術|硬幣|千術|廳堂|派對"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf/docs",
+  "pattern": "魔術|硬幣|千術|廳堂|派對",
+  "topFiles": [
+    {
+      "matchCount": 9,
+      "uri": "docs/timeline.md"
+    },
+    {
+      "matchCount": 21,
+      "uri": "docs/orgs-and-events.md"
+    },
+    {
+      "matchCount": 50,
+      "uri": "docs/magic.md"
+    },
+    {
+      "matchCount": 4,
+      "uri": "docs/performance.md"
+    },
+    {
+      "matchCount": 5,
+      "uri": "docs/cs.md"
+    },
+    {
+      "matchCount": 3,
+      "uri": "docs/footprints.md"
+    },
+    {
+      "matchCount": 28,
+      "uri": "docs/cubing.md"
+    }
+  ],
+  "totalFiles": 7,
+  "totalMatches": 120
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: /Users/shaneliu/Documents/GitHub/shaneliu-zf/readme.md</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+將蝴蝶刀加入手部極限運動。
+
+將魔法項目拆成硬幣、撲克牌、心靈、千術、派對、廳堂等獨立項目。保留催眠與腹語。蝴蝶刀同時留在雜技，並新增到手極。
+
+決定將蝴蝶刀從雜技移除，只留在手極，避免重複。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: /Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/profile.ts</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: /Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/profile.ts</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+正在確認技能標題是否來自「手部極限運動」與「雜技」。蝴蝶刀將顯示於「手部極限運動」。
+</details></think>
+
+_**Agent (default)**_
+
+已更新 Skills：
+
+- **手部極限運動**：加上蝴蝶刀（並從雜技移出，避免重複）
+- **表演藝術**：魔術拆成硬幣、撲克牌、心靈、千術、派對、廳堂，另保留催眠、腹語
+
+---
+
+_**User**_
+
+網站全端開發及架設維護
+
+改成
+
+全端開發 網站架設與維護
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+將在 profile.ts 及相關檔案中進行字串替換。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf",
+  "pattern": "網站全端開發及架設維護|全端開發及架設"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf",
+  "pattern": "網站全端開發及架設維護|全端開發及架設",
+  "topFiles": [
+    {
+      "matchCount": 1,
+      "uri": "./site/src/data/profile.ts"
+    },
+    {
+      "matchCount": 2,
+      "uri": "./.specstory/history/2026-08-16_05-40-49Z-resume-organization-feedback.md"
+    },
+    {
+      "matchCount": 1,
+      "uri": "./docs/cs.md"
+    }
+  ],
+  "totalFiles": 3,
+  "totalMatches": 4
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+檢查 CS_PROFILE.stack 欄位是否也有類似措辭。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf/site",
+  "pattern": "全端|架設"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf/site",
+  "pattern": "全端|架設",
+  "topFiles": [
+    {
+      "matchCount": 2,
+      "uri": "site/src/data/profile.ts"
+    },
+    {
+      "matchCount": 1,
+      "uri": "site/src/data/experiences.json"
+    }
+  ],
+  "totalFiles": 2,
+  "totalMatches": 3
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: /Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/profile.ts</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+StrReplace 已更新，但 Grep 仍顯示舊內容。可能是並行執行造成的快取問題。
+
+確認 profile.ts 的「全端開發」與「網站架設與維護」已分開。docs/cs.md 也會同步更新，保持用語一致。
+</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: /Users/shaneliu/Documents/GitHub/shaneliu-zf/docs/cs.md</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/profile.ts",
+  "pattern": "網站全端|全端開發|網站架設"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/shaneliu/Documents/GitHub/shaneliu-zf/site/src/data/profile.ts",
+  "pattern": "網站全端|全端開發|網站架設",
+  "topFiles": [
+    {
+      "matchCount": 2,
+      "uri": "site/src/data/profile.ts"
+    }
+  ],
+  "totalFiles": 1,
+  "totalMatches": 2
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+已將「網站全端開發及架設維護」改為「全端開發 網站架設與維護」。
+</details></think>
+
+_**Agent (default)**_
+
+已改成兩項：**全端開發**、**網站架設與維護**。
